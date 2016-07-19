@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Jornada1</key>
+	<dict>
+		<key>Lugar</key>
+		<string>Juan de la Cierva</string>
+		<key>KeyResultado</key>
+		<string>G</string>
+		<key>Resultado</key>
+		<string>2-1</string>
+		<key>Rival</key>
+		<string>Aston Birras</string>
+		<key>Hora</key>
+		<string>13/10/2016 17:00</string>
+	</dict>
+    <key>Jornada2</key>
+    <dict>
+        <key>Lugar</key>
+        <string>Juan de la Cierva2</string>
+        <key>KeyResultado</key>
+        <string>G</string>
+        <key>Resultado</key>
+        <string>2-1</string>
+        <key>Rival</key>
+        <string>Aston Birras2</string>
+        <key>Hora</key>
+        <string>13/10/2016 17:00</string>
+    </dict>
+    <key>Jornada3</key>
+    <dict>
+        <key>Lugar</key>
+        <string>Juan de la Cierva3</string>
+        <key>KeyResultado</key>
+        <string>G</string>
+        <key>Resultado</key>
+        <string>2-1</string>
+        <key>Rival</key>
+        <string>Aston Birras3</string>
+        <key>Hora</key>
+        <string>13/10/2016 17:00</string>
+    </dict>
+    <key>Jornada4</key>
+    <dict>
+        <key>Lugar</key>
+        <string>Juan de la Cierva4</string>
+        <key>KeyResultado</key>
+        <string>G</string>
+        <key>Resultado</key>
+        <string>2-1</string>
+        <key>Rival</key>
+        <string>Aston Birras4</string>
+        <key>Hora</key>
+        <string>13/10/2016 17:00</string>
+    </dict>
+    <key>Jornada5</key>
+    <dict>
+        <key>Lugar</key>
+        <string>Juan de la Cierva5</string>
+        <key>KeyResultado</key>
+        <string>G</string>
+        <key>Resultado</key>
+        <string>2-1</string>
+        <key>Rival</key>
+        <string>Aston Birras5</string>
+        <key>Hora</key>
+        <string>13/10/2016 17:00</string>
+    </dict>
+</dict>
+</plist>

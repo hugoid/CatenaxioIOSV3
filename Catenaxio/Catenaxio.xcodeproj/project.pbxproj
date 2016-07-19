@@ -14,6 +14,12 @@
 		1E58176F1D351F55004C0FC0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E58176D1D351F55004C0FC0 /* LaunchScreen.storyboard */; };
 		1E58177A1D351F55004C0FC0 /* CatenaxioTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5817791D351F55004C0FC0 /* CatenaxioTests.swift */; };
 		1E5817851D351F55004C0FC0 /* CatenaxioUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5817841D351F55004C0FC0 /* CatenaxioUITests.swift */; };
+		1EDF170A1D3E1D6100A34935 /* CatxTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDF17091D3E1D6100A34935 /* CatxTabBarController.swift */; };
+		1EDF170D1D3E228200A34935 /* CatxCalendario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDF170C1D3E228200A34935 /* CatxCalendario.swift */; };
+		1EDF17121D3E234C00A34935 /* CatxCeldaCalendario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDF17101D3E234C00A34935 /* CatxCeldaCalendario.swift */; };
+		1EDF17131D3E234C00A34935 /* CatxCeldaCalendario.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1EDF17111D3E234C00A34935 /* CatxCeldaCalendario.xib */; };
+		1EDF17161D3E27DB00A34935 /* Calendario.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1EDF17151D3E27DB00A34935 /* Calendario.plist */; };
+		1EDF17181D3E2BCD00A34935 /* CalendarioModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDF17171D3E2BCD00A34935 /* CalendarioModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +53,12 @@
 		1E5817801D351F55004C0FC0 /* CatenaxioUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CatenaxioUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E5817841D351F55004C0FC0 /* CatenaxioUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatenaxioUITests.swift; sourceTree = "<group>"; };
 		1E5817861D351F55004C0FC0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1EDF17091D3E1D6100A34935 /* CatxTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatxTabBarController.swift; sourceTree = "<group>"; };
+		1EDF170C1D3E228200A34935 /* CatxCalendario.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatxCalendario.swift; sourceTree = "<group>"; };
+		1EDF17101D3E234C00A34935 /* CatxCeldaCalendario.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatxCeldaCalendario.swift; sourceTree = "<group>"; };
+		1EDF17111D3E234C00A34935 /* CatxCeldaCalendario.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CatxCeldaCalendario.xib; sourceTree = "<group>"; };
+		1EDF17151D3E27DB00A34935 /* Calendario.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Calendario.plist; sourceTree = "<group>"; };
+		1EDF17171D3E2BCD00A34935 /* CalendarioModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarioModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,9 +109,10 @@
 		1E5817631D351F55004C0FC0 /* Catenaxio */ = {
 			isa = PBXGroup;
 			children = (
+				1E6D0E171D3E168E00A1F970 /* storyboards */,
+				1E6D0E161D3E168800A1F970 /* Controladores */,
 				1E5817641D351F55004C0FC0 /* AppDelegate.swift */,
 				1E5817661D351F55004C0FC0 /* ViewController.swift */,
-				1E5817681D351F55004C0FC0 /* Main.storyboard */,
 				1E58176B1D351F55004C0FC0 /* Assets.xcassets */,
 				1E58176D1D351F55004C0FC0 /* LaunchScreen.storyboard */,
 				1E5817701D351F55004C0FC0 /* Info.plist */,
@@ -123,6 +136,67 @@
 				1E5817861D351F55004C0FC0 /* Info.plist */,
 			);
 			path = CatenaxioUITests;
+			sourceTree = "<group>";
+		};
+		1E6D0E161D3E168800A1F970 /* Controladores */ = {
+			isa = PBXGroup;
+			children = (
+				1EDF170B1D3E1DDE00A34935 /* Calendario */,
+				1EDF17081D3E1D2C00A34935 /* TabBarController */,
+			);
+			name = Controladores;
+			sourceTree = "<group>";
+		};
+		1E6D0E171D3E168E00A1F970 /* storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				1E5817681D351F55004C0FC0 /* Main.storyboard */,
+			);
+			name = storyboards;
+			sourceTree = "<group>";
+		};
+		1EDF17081D3E1D2C00A34935 /* TabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				1EDF17091D3E1D6100A34935 /* CatxTabBarController.swift */,
+			);
+			name = TabBarController;
+			sourceTree = "<group>";
+		};
+		1EDF170B1D3E1DDE00A34935 /* Calendario */ = {
+			isa = PBXGroup;
+			children = (
+				1EDF17141D3E27C800A34935 /* data */,
+				1EDF170E1D3E230400A34935 /* interfaz */,
+				1EDF170C1D3E228200A34935 /* CatxCalendario.swift */,
+			);
+			name = Calendario;
+			sourceTree = "<group>";
+		};
+		1EDF170E1D3E230400A34935 /* interfaz */ = {
+			isa = PBXGroup;
+			children = (
+				1EDF170F1D3E230C00A34935 /* cells */,
+			);
+			name = interfaz;
+			sourceTree = "<group>";
+		};
+		1EDF170F1D3E230C00A34935 /* cells */ = {
+			isa = PBXGroup;
+			children = (
+				1EDF17101D3E234C00A34935 /* CatxCeldaCalendario.swift */,
+				1EDF17111D3E234C00A34935 /* CatxCeldaCalendario.xib */,
+			);
+			name = cells;
+			sourceTree = "<group>";
+		};
+		1EDF17141D3E27C800A34935 /* data */ = {
+			isa = PBXGroup;
+			children = (
+				1EDF17151D3E27DB00A34935 /* Calendario.plist */,
+				1EDF17171D3E2BCD00A34935 /* CalendarioModel.swift */,
+			);
+			name = data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,6 +306,8 @@
 				1E58176F1D351F55004C0FC0 /* LaunchScreen.storyboard in Resources */,
 				1E58176C1D351F55004C0FC0 /* Assets.xcassets in Resources */,
 				1E58176A1D351F55004C0FC0 /* Main.storyboard in Resources */,
+				1EDF17161D3E27DB00A34935 /* Calendario.plist in Resources */,
+				1EDF17131D3E234C00A34935 /* CatxCeldaCalendario.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,7 +333,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				1E5817671D351F55004C0FC0 /* ViewController.swift in Sources */,
+				1EDF170D1D3E228200A34935 /* CatxCalendario.swift in Sources */,
 				1E5817651D351F55004C0FC0 /* AppDelegate.swift in Sources */,
+				1EDF17181D3E2BCD00A34935 /* CalendarioModel.swift in Sources */,
+				1EDF17121D3E234C00A34935 /* CatxCeldaCalendario.swift in Sources */,
+				1EDF170A1D3E1D6100A34935 /* CatxTabBarController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -484,6 +564,7 @@
 				1E58178B1D351F55004C0FC0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1E58178C1D351F55004C0FC0 /* Build configuration list for PBXNativeTarget "CatenaxioTests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +573,7 @@
 				1E58178E1D351F55004C0FC0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1E58178F1D351F55004C0FC0 /* Build configuration list for PBXNativeTarget "CatenaxioUITests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +582,7 @@
 				1E5817911D351F55004C0FC0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
