@@ -7,14 +7,21 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseDatabase
 
 class CatxCalendario: UIViewController,UITableViewDelegate,UITableViewDataSource {
+
+    var ref : FIRDatabaseReference?
+    
+    
 
     
     
     @IBOutlet weak var tableView: UITableView!
     var listCalendario:[String : AnyObject] = [String : AnyObject]();
     var listCalendarioData:[CalendarioModel] = [CalendarioModel]();
+    var listCalendarioDataFirebase:[CalendarioModelFireBase] = [CalendarioModelFireBase]();
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,8 +31,88 @@ class CatxCalendario: UIViewController,UITableViewDelegate,UITableViewDataSource
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(true);
-        self.setup();
-        self.loadData();
+        if Reachability.isConnectedToNetwork() == true {
+            print("Internet connection OK")
+            self.downloadFireBaseData();
+        } else {
+            print("Internet connection FAILED")
+            
+            self.setup();
+            self.loadData();
+            self.downloadFireBaseData();
+        }
+        
+        self.downloadFireBaseData();
+        
+        
+        
+        
+    }
+    
+    func downloadFireBaseData () -> Void {
+        self.ref = FIRDatabase.database().reference()
+        
+       
+        
+        if let refUnwrapped = self.ref {
+            
+            refUnwrapped.observeEventType(.Value, withBlock: { snapshot in
+                print(snapshot.value)
+                
+                
+                for numJornada:Int in 1...5 {
+                    let itemsRef = snapshot.value?.valueForKey("Jornada" +  String(numJornada));
+                    let calendarioModelFireBase:CalendarioModelFireBase = CalendarioModelFireBase();
+                    print("Mi jornada 1 es \(snapshot.value?.valueForKey("Jornada" +  String(numJornada)))");
+                    calendarioModelFireBase.resultado = itemsRef!.valueForKey("Resultado") as! String;
+                    calendarioModelFireBase.keyResultado = itemsRef!.valueForKey("KeyResultado") as! String;
+                    self.listCalendarioDataFirebase.append(calendarioModelFireBase);
+                    
+                }
+                
+                print("termino");
+                
+                self.setup();
+                self.loadData();
+                
+                }, withCancelBlock: { error in
+                    print(error.description)
+                    print("nooooo");
+                    self.setup();
+                    self.loadData();
+            })
+            
+            
+            refUnwrapped.observeEventType(.Value, withBlock: { snapshot in
+                print(snapshot.value)
+                
+                
+                for numJornada:Int in 1...5 {
+                    let itemsRef = snapshot.value?.valueForKey("Jornada" +  String(numJornada));
+                    let calendarioModelFireBase:CalendarioModelFireBase = CalendarioModelFireBase();
+                    print("Mi jornada 1 es \(snapshot.value?.valueForKey("Jornada" +  String(numJornada)))");
+                    calendarioModelFireBase.resultado = itemsRef!.valueForKey("Resultado") as! String;
+                    calendarioModelFireBase.keyResultado = itemsRef!.valueForKey("KeyResultado") as! String;
+                    self.listCalendarioDataFirebase.append(calendarioModelFireBase);
+                    
+                }
+                
+                print("termino");
+                
+                self.setup();
+                self.loadData();
+                
+                }, withCancelBlock: { error in
+                    print(error.description)
+                    print("nooooo");
+                    self.setup();
+                    self.loadData();
+            })
+        }
+        else{
+            print("no online");
+        }
+        
         
     }
     
@@ -59,9 +146,23 @@ class CatxCalendario: UIViewController,UITableViewDelegate,UITableViewDataSource
                   
                     calendarioModel.hora = valorJornadaUnwrapped["Hora"] as! String;
                     calendarioModel.rival = valorJornadaUnwrapped["Rival"] as! String;
-                    calendarioModel.resultado = valorJornadaUnwrapped["Resultado"] as! String;
+                    
+                    if self.listCalendarioDataFirebase.count != 0 {
+                        calendarioModel.resultado = listCalendarioDataFirebase[numJornada - 1].resultado;
+                    }
+                    else{
+                        calendarioModel.resultado = valorJornadaUnwrapped["Resultado"] as! String;
+                    }
+                    
                     calendarioModel.lugar = valorJornadaUnwrapped["Lugar"] as! String;
-                    calendarioModel.keyResultado = valorJornadaUnwrapped["KeyResultado"] as! String;
+                    
+                    if self.listCalendarioDataFirebase.count != 0 {
+                        calendarioModel.keyResultado = listCalendarioDataFirebase[numJornada - 1].keyResultado;
+                    }
+                    else{
+                        calendarioModel.keyResultado = "X";
+                    }
+                    
                     listCalendarioData.append(calendarioModel);
                 }
                 

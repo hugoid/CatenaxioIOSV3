@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E4570BD1D3F503E00E96D83 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1E4570BC1D3F503E00E96D83 /* GoogleService-Info.plist */; };
+		1E5424C11D3F8DD700C14619 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5424C01D3F8DD700C14619 /* Reachability.swift */; };
 		1E5817651D351F55004C0FC0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5817641D351F55004C0FC0 /* AppDelegate.swift */; };
 		1E5817671D351F55004C0FC0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5817661D351F55004C0FC0 /* ViewController.swift */; };
 		1E58176A1D351F55004C0FC0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E5817681D351F55004C0FC0 /* Main.storyboard */; };
@@ -14,12 +16,14 @@
 		1E58176F1D351F55004C0FC0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E58176D1D351F55004C0FC0 /* LaunchScreen.storyboard */; };
 		1E58177A1D351F55004C0FC0 /* CatenaxioTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5817791D351F55004C0FC0 /* CatenaxioTests.swift */; };
 		1E5817851D351F55004C0FC0 /* CatenaxioUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5817841D351F55004C0FC0 /* CatenaxioUITests.swift */; };
+		1EB9C5141D3F7641009DC3C8 /* CalendarioModeloFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB9C5131D3F7641009DC3C8 /* CalendarioModeloFirebase.swift */; };
 		1EDF170A1D3E1D6100A34935 /* CatxTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDF17091D3E1D6100A34935 /* CatxTabBarController.swift */; };
 		1EDF170D1D3E228200A34935 /* CatxCalendario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDF170C1D3E228200A34935 /* CatxCalendario.swift */; };
 		1EDF17121D3E234C00A34935 /* CatxCeldaCalendario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDF17101D3E234C00A34935 /* CatxCeldaCalendario.swift */; };
 		1EDF17131D3E234C00A34935 /* CatxCeldaCalendario.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1EDF17111D3E234C00A34935 /* CatxCeldaCalendario.xib */; };
 		1EDF17161D3E27DB00A34935 /* Calendario.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1EDF17151D3E27DB00A34935 /* Calendario.plist */; };
 		1EDF17181D3E2BCD00A34935 /* CalendarioModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDF17171D3E2BCD00A34935 /* CalendarioModel.swift */; };
+		DFF8A923070808A2EA0A7A94 /* libPods-Catenaxio.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E8187ED9C3CA52807DC92023 /* libPods-Catenaxio.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +44,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1E4570BC1D3F503E00E96D83 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		1E5424C01D3F8DD700C14619 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		1E5817611D351F55004C0FC0 /* Catenaxio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Catenaxio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E5817641D351F55004C0FC0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1E5817661D351F55004C0FC0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -53,12 +59,16 @@
 		1E5817801D351F55004C0FC0 /* CatenaxioUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CatenaxioUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E5817841D351F55004C0FC0 /* CatenaxioUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatenaxioUITests.swift; sourceTree = "<group>"; };
 		1E5817861D351F55004C0FC0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1EB9C5131D3F7641009DC3C8 /* CalendarioModeloFirebase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarioModeloFirebase.swift; sourceTree = "<group>"; };
 		1EDF17091D3E1D6100A34935 /* CatxTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatxTabBarController.swift; sourceTree = "<group>"; };
 		1EDF170C1D3E228200A34935 /* CatxCalendario.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatxCalendario.swift; sourceTree = "<group>"; };
 		1EDF17101D3E234C00A34935 /* CatxCeldaCalendario.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatxCeldaCalendario.swift; sourceTree = "<group>"; };
 		1EDF17111D3E234C00A34935 /* CatxCeldaCalendario.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CatxCeldaCalendario.xib; sourceTree = "<group>"; };
 		1EDF17151D3E27DB00A34935 /* Calendario.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Calendario.plist; sourceTree = "<group>"; };
 		1EDF17171D3E2BCD00A34935 /* CalendarioModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarioModel.swift; sourceTree = "<group>"; };
+		2FC67B021CFD4333A19D9EDA /* Pods-Catenaxio.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Catenaxio.release.xcconfig"; path = "Pods/Target Support Files/Pods-Catenaxio/Pods-Catenaxio.release.xcconfig"; sourceTree = "<group>"; };
+		8D338289B2B9331D6E4C593B /* Pods-Catenaxio.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Catenaxio.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Catenaxio/Pods-Catenaxio.debug.xcconfig"; sourceTree = "<group>"; };
+		E8187ED9C3CA52807DC92023 /* libPods-Catenaxio.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Catenaxio.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DFF8A923070808A2EA0A7A94 /* libPods-Catenaxio.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,6 +97,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1E5424BF1D3F8DC700C14619 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				1E5424C01D3F8DD700C14619 /* Reachability.swift */,
+			);
+			name = Network;
+			sourceTree = "<group>";
+		};
 		1E5817581D351F55004C0FC0 = {
 			isa = PBXGroup;
 			children = (
@@ -93,6 +112,8 @@
 				1E5817781D351F55004C0FC0 /* CatenaxioTests */,
 				1E5817831D351F55004C0FC0 /* CatenaxioUITests */,
 				1E5817621D351F55004C0FC0 /* Products */,
+				C497A130B6957D0217B075E9 /* Pods */,
+				B982B92DD2EF26BC8EB0B834 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -109,6 +130,7 @@
 		1E5817631D351F55004C0FC0 /* Catenaxio */ = {
 			isa = PBXGroup;
 			children = (
+				1E5424BF1D3F8DC700C14619 /* Network */,
 				1E6D0E171D3E168E00A1F970 /* storyboards */,
 				1E6D0E161D3E168800A1F970 /* Controladores */,
 				1E5817641D351F55004C0FC0 /* AppDelegate.swift */,
@@ -116,6 +138,7 @@
 				1E58176B1D351F55004C0FC0 /* Assets.xcassets */,
 				1E58176D1D351F55004C0FC0 /* LaunchScreen.storyboard */,
 				1E5817701D351F55004C0FC0 /* Info.plist */,
+				1E4570BC1D3F503E00E96D83 /* GoogleService-Info.plist */,
 			);
 			path = Catenaxio;
 			sourceTree = "<group>";
@@ -195,8 +218,26 @@
 			children = (
 				1EDF17151D3E27DB00A34935 /* Calendario.plist */,
 				1EDF17171D3E2BCD00A34935 /* CalendarioModel.swift */,
+				1EB9C5131D3F7641009DC3C8 /* CalendarioModeloFirebase.swift */,
 			);
 			name = data;
+			sourceTree = "<group>";
+		};
+		B982B92DD2EF26BC8EB0B834 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E8187ED9C3CA52807DC92023 /* libPods-Catenaxio.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C497A130B6957D0217B075E9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8D338289B2B9331D6E4C593B /* Pods-Catenaxio.debug.xcconfig */,
+				2FC67B021CFD4333A19D9EDA /* Pods-Catenaxio.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -206,9 +247,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1E5817891D351F55004C0FC0 /* Build configuration list for PBXNativeTarget "Catenaxio" */;
 			buildPhases = (
+				2F1C53A8A03CEE26280C2035 /* [CP] Check Pods Manifest.lock */,
 				1E58175D1D351F55004C0FC0 /* Sources */,
 				1E58175E1D351F55004C0FC0 /* Frameworks */,
 				1E58175F1D351F55004C0FC0 /* Resources */,
+				DF3BF32FD6446E2924B6B872 /* [CP] Embed Pods Frameworks */,
+				22F28A19F01549E1275C0673 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -267,6 +311,7 @@
 				TargetAttributes = {
 					1E5817601D351F55004C0FC0 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 6VCNHZ8PYX;
 					};
 					1E5817741D351F55004C0FC0 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -308,6 +353,7 @@
 				1E58176A1D351F55004C0FC0 /* Main.storyboard in Resources */,
 				1EDF17161D3E27DB00A34935 /* Calendario.plist in Resources */,
 				1EDF17131D3E234C00A34935 /* CatxCeldaCalendario.xib in Resources */,
+				1E4570BD1D3F503E00E96D83 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -327,6 +373,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		22F28A19F01549E1275C0673 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Catenaxio/Pods-Catenaxio-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2F1C53A8A03CEE26280C2035 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		DF3BF32FD6446E2924B6B872 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Catenaxio/Pods-Catenaxio-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		1E58175D1D351F55004C0FC0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -336,7 +430,9 @@
 				1EDF170D1D3E228200A34935 /* CatxCalendario.swift in Sources */,
 				1E5817651D351F55004C0FC0 /* AppDelegate.swift in Sources */,
 				1EDF17181D3E2BCD00A34935 /* CalendarioModel.swift in Sources */,
+				1EB9C5141D3F7641009DC3C8 /* CalendarioModeloFirebase.swift in Sources */,
 				1EDF17121D3E234C00A34935 /* CatxCeldaCalendario.swift in Sources */,
+				1E5424C11D3F8DD700C14619 /* Reachability.swift in Sources */,
 				1EDF170A1D3E1D6100A34935 /* CatxTabBarController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -479,23 +575,31 @@
 		};
 		1E58178A1D351F55004C0FC0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8D338289B2B9331D6E4C593B /* Pods-Catenaxio.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Catenaxio/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = catenaxio.Catenaxio;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
 		1E58178B1D351F55004C0FC0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2FC67B021CFD4333A19D9EDA /* Pods-Catenaxio.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Catenaxio/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = catenaxio.Catenaxio;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

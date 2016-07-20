@@ -1,0 +1,435 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4B77D537C534F6CE3918D794CC1A2A4E /* Pods-Catenaxio-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A2147E777C8BC38DA091AC70E51C28F /* Pods-Catenaxio-dummy.m */; };
+		9F7D839C004919C5892A93864910FD41 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		11A8DDB524B93E3A7985CB6ECC6D0E9C /* Pods-Catenaxio.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Catenaxio.debug.xcconfig"; sourceTree = "<group>"; };
+		125F5ADCC3B2AE087E134125A541F82B /* Pods-Catenaxio-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Catenaxio-frameworks.sh"; sourceTree = "<group>"; };
+		173BE3D5E7FD6884B2A5AF3236974771 /* GoogleSymbolUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleSymbolUtilities.framework; path = Frameworks/GoogleSymbolUtilities.framework; sourceTree = "<group>"; };
+		3C13AAE78B10B23BC5CC04F93B47C36C /* libPods-Catenaxio.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Catenaxio.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7BDBAD55E1A2761466841D5CE7EB5F11 /* FirebaseInstanceID.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseInstanceID.framework; path = Frameworks/FirebaseInstanceID.framework; sourceTree = "<group>"; };
+		7CD199F8B6D25F7B50DD7470ABA5A831 /* FirebaseAnalytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseAnalytics.framework; path = Frameworks/frameworks/FirebaseAnalytics.framework; sourceTree = "<group>"; };
+		7DEFA2A95B488C8A34F6A4B3B3E380BE /* Pods-Catenaxio.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Catenaxio.release.xcconfig"; sourceTree = "<group>"; };
+		8A2147E777C8BC38DA091AC70E51C28F /* Pods-Catenaxio-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Catenaxio-dummy.m"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9EC2A979829F26A198D3459B48C5996B /* GoogleInterchangeUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleInterchangeUtilities.framework; path = Frameworks/GoogleInterchangeUtilities.framework; sourceTree = "<group>"; };
+		A39BD961D8E479800B235598C95B72F8 /* Pods-Catenaxio-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Catenaxio-acknowledgements.plist"; sourceTree = "<group>"; };
+		A5741189EF84E5DE25E60A0E56BCF13F /* GoogleUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleUtilities.framework; path = Frameworks/GoogleUtilities.framework; sourceTree = "<group>"; };
+		B20CBCA1505CBB0552A608007AD23A99 /* FirebaseDatabase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseDatabase.framework; path = Frameworks/FirebaseDatabase.framework; sourceTree = "<group>"; };
+		B5B0EC98C05C53BB1306BA770B8BBE79 /* Pods-Catenaxio-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Catenaxio-acknowledgements.markdown"; sourceTree = "<group>"; };
+		C3AA50E3FDE7B324B387837899C4C477 /* Firebase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Firebase.h; path = Headers/Firebase.h; sourceTree = "<group>"; };
+		CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		D827FABFB248142840BCA00033329D89 /* FIRInstanceID.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRInstanceID.h; path = Headers/Public/FIRInstanceID.h; sourceTree = "<group>"; };
+		F6BF7074E2B5434D24599749B254C932 /* Pods-Catenaxio-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Catenaxio-resources.sh"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3EF260069D281956EA0B3BFE6CF283A4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F7D839C004919C5892A93864910FD41 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		17F44D02479172F82D13993E1D3145FA /* FirebaseAnalytics */ = {
+			isa = PBXGroup;
+			children = (
+				EE171FCA9129C563D5DD74910A51F38F /* Frameworks */,
+			);
+			path = FirebaseAnalytics;
+			sourceTree = "<group>";
+		};
+		3715C1FD65FC43924AEE615C9BA949B5 /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+				81C9A50E942732A55AAB07567D987531 /* Analytics */,
+			);
+			path = Firebase;
+			sourceTree = "<group>";
+		};
+		3DCAB2B7CDE207B3958B6CB957FCC758 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		4A97192267D00D27B6965F755BFF626A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7BDBAD55E1A2761466841D5CE7EB5F11 /* FirebaseInstanceID.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		53B766708A83BA1A9712BB209BA238E3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3715C1FD65FC43924AEE615C9BA949B5 /* Firebase */,
+				17F44D02479172F82D13993E1D3145FA /* FirebaseAnalytics */,
+				A0312E391FAD27C57573DF24E02718A2 /* FirebaseDatabase */,
+				77A51F94615C587721C6F577BCB4E6E3 /* FirebaseInstanceID */,
+				80EEC67F754484ADF268A0844CB4211B /* GoogleInterchangeUtilities */,
+				B5741D6B1D1895BF37B98C326875D222 /* GoogleSymbolUtilities */,
+				7B45E2FBFA12606E601C184142189D7F /* GoogleUtilities */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		5B744589EB306B5B04C2178D4790756A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9EC2A979829F26A198D3459B48C5996B /* GoogleInterchangeUtilities.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		77A51F94615C587721C6F577BCB4E6E3 /* FirebaseInstanceID */ = {
+			isa = PBXGroup;
+			children = (
+				D827FABFB248142840BCA00033329D89 /* FIRInstanceID.h */,
+				4A97192267D00D27B6965F755BFF626A /* Frameworks */,
+			);
+			path = FirebaseInstanceID;
+			sourceTree = "<group>";
+		};
+		7B45E2FBFA12606E601C184142189D7F /* GoogleUtilities */ = {
+			isa = PBXGroup;
+			children = (
+				90078067A3170139DC228D6ABFD06366 /* Frameworks */,
+			);
+			path = GoogleUtilities;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				53B766708A83BA1A9712BB209BA238E3 /* Pods */,
+				D89E39C12B92303013804369A50D2381 /* Products */,
+				90E4587AA850770CBA3111216F0E371B /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		80EEC67F754484ADF268A0844CB4211B /* GoogleInterchangeUtilities */ = {
+			isa = PBXGroup;
+			children = (
+				5B744589EB306B5B04C2178D4790756A /* Frameworks */,
+			);
+			path = GoogleInterchangeUtilities;
+			sourceTree = "<group>";
+		};
+		81C9A50E942732A55AAB07567D987531 /* Analytics */ = {
+			isa = PBXGroup;
+			children = (
+				C3AA50E3FDE7B324B387837899C4C477 /* Firebase.h */,
+			);
+			name = Analytics;
+			sourceTree = "<group>";
+		};
+		90078067A3170139DC228D6ABFD06366 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A5741189EF84E5DE25E60A0E56BCF13F /* GoogleUtilities.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		90E4587AA850770CBA3111216F0E371B /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				EE4A1C67420B916A3C3084B344EF86D1 /* Pods-Catenaxio */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		949B9CD97B7207991D0232819128CB8F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				173BE3D5E7FD6884B2A5AF3236974771 /* GoogleSymbolUtilities.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A0312E391FAD27C57573DF24E02718A2 /* FirebaseDatabase */ = {
+			isa = PBXGroup;
+			children = (
+				CA0FCDCAC546F682AE5C60F5E9C42055 /* Frameworks */,
+			);
+			path = FirebaseDatabase;
+			sourceTree = "<group>";
+		};
+		B5741D6B1D1895BF37B98C326875D222 /* GoogleSymbolUtilities */ = {
+			isa = PBXGroup;
+			children = (
+				949B9CD97B7207991D0232819128CB8F /* Frameworks */,
+			);
+			path = GoogleSymbolUtilities;
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3DCAB2B7CDE207B3958B6CB957FCC758 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CA0FCDCAC546F682AE5C60F5E9C42055 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B20CBCA1505CBB0552A608007AD23A99 /* FirebaseDatabase.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D89E39C12B92303013804369A50D2381 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3C13AAE78B10B23BC5CC04F93B47C36C /* libPods-Catenaxio.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EE171FCA9129C563D5DD74910A51F38F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7CD199F8B6D25F7B50DD7470ABA5A831 /* FirebaseAnalytics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EE4A1C67420B916A3C3084B344EF86D1 /* Pods-Catenaxio */ = {
+			isa = PBXGroup;
+			children = (
+				B5B0EC98C05C53BB1306BA770B8BBE79 /* Pods-Catenaxio-acknowledgements.markdown */,
+				A39BD961D8E479800B235598C95B72F8 /* Pods-Catenaxio-acknowledgements.plist */,
+				8A2147E777C8BC38DA091AC70E51C28F /* Pods-Catenaxio-dummy.m */,
+				125F5ADCC3B2AE087E134125A541F82B /* Pods-Catenaxio-frameworks.sh */,
+				F6BF7074E2B5434D24599749B254C932 /* Pods-Catenaxio-resources.sh */,
+				11A8DDB524B93E3A7985CB6ECC6D0E9C /* Pods-Catenaxio.debug.xcconfig */,
+				7DEFA2A95B488C8A34F6A4B3B3E380BE /* Pods-Catenaxio.release.xcconfig */,
+			);
+			name = "Pods-Catenaxio";
+			path = "Target Support Files/Pods-Catenaxio";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		87757A07DEF250F094C78904D4915C4A /* Pods-Catenaxio */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5F167865513AF9801F86948BA808142A /* Build configuration list for PBXNativeTarget "Pods-Catenaxio" */;
+			buildPhases = (
+				E446C10C6ADFFEEA1C6085D1B9E8352C /* Sources */,
+				3EF260069D281956EA0B3BFE6CF283A4 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-Catenaxio";
+			productName = "Pods-Catenaxio";
+			productReference = 3C13AAE78B10B23BC5CC04F93B47C36C /* libPods-Catenaxio.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = D89E39C12B92303013804369A50D2381 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				87757A07DEF250F094C78904D4915C4A /* Pods-Catenaxio */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E446C10C6ADFFEEA1C6085D1B9E8352C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B77D537C534F6CE3918D794CC1A2A4E /* Pods-Catenaxio-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		05CB9E1D625FE707F23E4F6AF60E24A4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 11A8DDB524B93E3A7985CB6ECC6D0E9C /* Pods-Catenaxio.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		47BEF9D903506B003EA5C2B249729489 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		76C3BBE82E1951D97F3F7E8518BB4178 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7DEFA2A95B488C8A34F6A4B3B3E380BE /* Pods-Catenaxio.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		AAF678CED40D3499169D10F63CA0719E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				47BEF9D903506B003EA5C2B249729489 /* Debug */,
+				AAF678CED40D3499169D10F63CA0719E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5F167865513AF9801F86948BA808142A /* Build configuration list for PBXNativeTarget "Pods-Catenaxio" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				05CB9E1D625FE707F23E4F6AF60E24A4 /* Debug */,
+				76C3BBE82E1951D97F3F7E8518BB4178 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}
