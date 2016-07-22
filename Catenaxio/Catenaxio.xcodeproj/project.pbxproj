@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E118A7F1D424063000BDE12 /* EstadisticasModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E118A7E1D424063000BDE12 /* EstadisticasModel.swift */; };
+		1E118A811D42465F000BDE12 /* Estadisticas.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1E118A801D42465F000BDE12 /* Estadisticas.plist */; };
 		1E4570BD1D3F503E00E96D83 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1E4570BC1D3F503E00E96D83 /* GoogleService-Info.plist */; };
 		1E5424C11D3F8DD700C14619 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5424C01D3F8DD700C14619 /* Reachability.swift */; };
+		1E57BBFE1D423DF400707E6D /* CatxEstadisticas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E57BBFD1D423DF400707E6D /* CatxEstadisticas.swift */; };
 		1E5817651D351F55004C0FC0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5817641D351F55004C0FC0 /* AppDelegate.swift */; };
 		1E5817671D351F55004C0FC0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5817661D351F55004C0FC0 /* ViewController.swift */; };
 		1E58176A1D351F55004C0FC0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E5817681D351F55004C0FC0 /* Main.storyboard */; };
@@ -44,8 +47,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1E118A7E1D424063000BDE12 /* EstadisticasModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EstadisticasModel.swift; sourceTree = "<group>"; };
+		1E118A801D42465F000BDE12 /* Estadisticas.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Estadisticas.plist; sourceTree = "<group>"; };
 		1E4570BC1D3F503E00E96D83 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1E5424C01D3F8DD700C14619 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		1E57BBFD1D423DF400707E6D /* CatxEstadisticas.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatxEstadisticas.swift; sourceTree = "<group>"; };
 		1E5817611D351F55004C0FC0 /* Catenaxio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Catenaxio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E5817641D351F55004C0FC0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1E5817661D351F55004C0FC0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -97,12 +103,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1E118A7C1D424013000BDE12 /* data */ = {
+			isa = PBXGroup;
+			children = (
+				1E118A7E1D424063000BDE12 /* EstadisticasModel.swift */,
+				1E118A801D42465F000BDE12 /* Estadisticas.plist */,
+			);
+			name = data;
+			sourceTree = "<group>";
+		};
+		1E118A7D1D424017000BDE12 /* interfaz */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = interfaz;
+			sourceTree = "<group>";
+		};
 		1E5424BF1D3F8DC700C14619 /* Network */ = {
 			isa = PBXGroup;
 			children = (
 				1E5424C01D3F8DD700C14619 /* Reachability.swift */,
 			);
 			name = Network;
+			sourceTree = "<group>";
+		};
+		1E57BBFC1D423D5B00707E6D /* Estadisticas */ = {
+			isa = PBXGroup;
+			children = (
+				1E118A7D1D424017000BDE12 /* interfaz */,
+				1E118A7C1D424013000BDE12 /* data */,
+				1E57BBFD1D423DF400707E6D /* CatxEstadisticas.swift */,
+			);
+			name = Estadisticas;
 			sourceTree = "<group>";
 		};
 		1E5817581D351F55004C0FC0 = {
@@ -164,6 +196,7 @@
 		1E6D0E161D3E168800A1F970 /* Controladores */ = {
 			isa = PBXGroup;
 			children = (
+				1E57BBFC1D423D5B00707E6D /* Estadisticas */,
 				1EDF170B1D3E1DDE00A34935 /* Calendario */,
 				1EDF17081D3E1D2C00A34935 /* TabBarController */,
 			);
@@ -352,6 +385,7 @@
 				1E58176C1D351F55004C0FC0 /* Assets.xcassets in Resources */,
 				1E58176A1D351F55004C0FC0 /* Main.storyboard in Resources */,
 				1EDF17161D3E27DB00A34935 /* Calendario.plist in Resources */,
+				1E118A811D42465F000BDE12 /* Estadisticas.plist in Resources */,
 				1EDF17131D3E234C00A34935 /* CatxCeldaCalendario.xib in Resources */,
 				1E4570BD1D3F503E00E96D83 /* GoogleService-Info.plist in Resources */,
 			);
@@ -430,9 +464,11 @@
 				1EDF170D1D3E228200A34935 /* CatxCalendario.swift in Sources */,
 				1E5817651D351F55004C0FC0 /* AppDelegate.swift in Sources */,
 				1EDF17181D3E2BCD00A34935 /* CalendarioModel.swift in Sources */,
+				1E57BBFE1D423DF400707E6D /* CatxEstadisticas.swift in Sources */,
 				1EB9C5141D3F7641009DC3C8 /* CalendarioModeloFirebase.swift in Sources */,
 				1EDF17121D3E234C00A34935 /* CatxCeldaCalendario.swift in Sources */,
 				1E5424C11D3F8DD700C14619 /* Reachability.swift in Sources */,
+				1E118A7F1D424063000BDE12 /* EstadisticasModel.swift in Sources */,
 				1EDF170A1D3E1D6100A34935 /* CatxTabBarController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

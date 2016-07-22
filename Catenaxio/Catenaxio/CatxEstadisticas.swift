@@ -10,18 +10,18 @@ import UIKit
 import Firebase
 import FirebaseDatabase
 
-class CatxCalendario: UIViewController,UITableViewDelegate,UITableViewDataSource {
-
+class CatxEstadisticas: UIViewController,UITableViewDelegate,UITableViewDataSource {
+    
     var ref : FIRDatabaseReference?
     
     
-
+    
     
     
     @IBOutlet weak var tableView: UITableView!
     var listCalendario:[String : AnyObject] = [String : AnyObject]();
-    var listCalendarioData:[CalendarioModel] = [CalendarioModel]();
-    var listCalendarioDataFirebase:[CalendarioModel] = [CalendarioModel]();
+    var listCalendarioData:[EstadisticasModel] = [EstadisticasModel]();
+    var listCalendarioDataFirebase:[EstadisticasModel] = [EstadisticasModel]();
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,7 +31,7 @@ class CatxCalendario: UIViewController,UITableViewDelegate,UITableViewDataSource
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(true);
-        if Reachability.isConnectedToNetwork() == true {
+        /*if Reachability.isConnectedToNetwork() == true {
             print("Internet connection OK")
             self.downloadFireBaseData();
         } else {
@@ -40,10 +40,11 @@ class CatxCalendario: UIViewController,UITableViewDelegate,UITableViewDataSource
             self.setup();
             self.loadData();
             self.downloadFireBaseData();
-        }
+        }*/
         
         
-        
+        self.setup();
+        self.loadData();
         
         
         
@@ -52,51 +53,61 @@ class CatxCalendario: UIViewController,UITableViewDelegate,UITableViewDataSource
     func downloadFireBaseData () -> Void {
         self.ref = FIRDatabase.database().reference()
         
-       
-        
-        if let refUnwrapped = self.ref {
+        if let refUnwrapped1 = self.ref {
+            let refEstadisticas : FIRDatabaseReference? = refUnwrapped1.child("Estadisticas");
             
-            refUnwrapped.observeEventType(.Value, withBlock: { snapshot in
-                print(snapshot.value)
+            if let refUnwrapped = refEstadisticas {
                 
-                
-                for numJornada:Int in 1...5 {
-                    let itemsRef = snapshot.value?.valueForKey("Jornada" +  String(numJornada));
-                    let calendarioModelFireBase:CalendarioModel = CalendarioModel();
-                    print("Mi jornada 1 es \(snapshot.value?.valueForKey("Jornada" +  String(numJornada)))");
-                    calendarioModelFireBase.resultado = itemsRef!.valueForKey("Resultado") as! String;
-                    calendarioModelFireBase.keyResultado = itemsRef!.valueForKey("KeyResultado") as! String;
-                    calendarioModelFireBase.lugar = itemsRef!.valueForKey("Lugar") as! String;
-                    calendarioModelFireBase.rival = itemsRef!.valueForKey("Rival") as! String;
-                    calendarioModelFireBase.hora = itemsRef!.valueForKey("Hora") as! String;
-                    self.listCalendarioDataFirebase.append(calendarioModelFireBase);
+                refUnwrapped.observeEventType(.Value, withBlock: { snapshot in
+                    print(snapshot.value)
                     
-                }
-                
-                print("termino");
-                
-                self.setup();
-                self.loadData();
-                
-                }, withCancelBlock: { error in
-                    print(error.description)
-                    print("nooooo");
+                    
+                    let listaJugadores:[AnyObject] = snapshot.value?.valueForKey("Jugadores") as! [AnyObject];
+                    
+                    for jugador:AnyObject in listaJugadores {
+                        print("mis jugador \(jugador)");
+                        
+                        let miJugador:EstadisticasModel = EstadisticasModel();
+                        miJugador.nombre = jugador.valueForKey("Nombre") as! String;
+                        miJugador.asistencias = jugador.valueForKey("Asistencias") as! String;
+                        miJugador.goles = jugador.valueForKey("Goles") as! String;
+                        miJugador.partidosGanados = jugador.valueForKey("PG") as! String;
+                        miJugador.partidosJugados = jugador.valueForKey("PJ") as! String;
+                        miJugador.urlImagenJugador = "xx";
+                        
+                    }
+                    
+                   
+                    
+                    print("termino");
+                    
                     self.setup();
                     self.loadData();
-            })
-            
-            
+                    
+                    }, withCancelBlock: { error in
+                        print(error.description)
+                        print("nooooo");
+                        self.setup();
+                        self.loadData();
+                })
+                
+                
+            }
+            else{
+                print("no online");
+            }
         }
-        else{
-            print("no online");
-        }
+        
+        
+        
+        
         
         
     }
     
     func setup () -> Void {
         self.tableView.registerNib(UINib(nibName: "CatxCeldaCalendario", bundle: nil), forCellReuseIdentifier: CatxCeldaCalendario.cellId);
-      
+        
         //self.tableView.registerNib(UINib(nibName: "HeaderCeldaPanelAdministrador", bundle: nil), forHeaderFooterViewReuseIdentifier: HeaderCeldaPanelAdministrador.cellId);
         self.tableView.delegate = self;
         self.tableView.dataSource = self;
@@ -105,7 +116,7 @@ class CatxCalendario: UIViewController,UITableViewDelegate,UITableViewDataSource
     
     // MARK: - Cargar Modelo
     func loadData () -> Void {
-        self.listCalendarioData = [CalendarioModel]();
+        self.listCalendarioData = [EstadisticasModel]();
         
         
         if (listCalendarioDataFirebase.count != 0) {
@@ -113,24 +124,24 @@ class CatxCalendario: UIViewController,UITableViewDelegate,UITableViewDataSource
             for numJornada:Int in 1...self.listCalendarioDataFirebase.count {
                 
                 
-               
                 
-                    let calendarioModel:CalendarioModel = CalendarioModel();
-                    
-                    calendarioModel.hora = listCalendarioDataFirebase[numJornada - 1].hora;
-                    calendarioModel.rival = listCalendarioDataFirebase[numJornada - 1].rival;
-                    
-                    
-                    calendarioModel.resultado = listCalendarioDataFirebase[numJornada - 1].resultado;
-                    
-                    
-                    calendarioModel.lugar = listCalendarioDataFirebase[numJornada - 1].lugar;
-                    
-                    
-                    calendarioModel.keyResultado = listCalendarioDataFirebase[numJornada - 1].keyResultado;
-                    
-                    
-                    listCalendarioData.append(calendarioModel);
+                
+                let jugadorModel:EstadisticasModel = EstadisticasModel();
+                
+                jugadorModel.nombre = listCalendarioDataFirebase[numJornada - 1].nombre;
+                jugadorModel.asistencias = listCalendarioDataFirebase[numJornada - 1].asistencias;
+                
+                
+                jugadorModel.partidosJugados = listCalendarioDataFirebase[numJornada - 1].partidosJugados;
+                
+                
+                jugadorModel.partidosGanados = listCalendarioDataFirebase[numJornada - 1].partidosGanados;
+                
+                
+                jugadorModel.goles = listCalendarioDataFirebase[numJornada - 1].goles;
+                
+                
+                listCalendarioData.append(jugadorModel);
                 
                 
                 
@@ -138,16 +149,27 @@ class CatxCalendario: UIViewController,UITableViewDelegate,UITableViewDataSource
             
         }
         else{
-            if let path = NSBundle.mainBundle().pathForResource("Calendario", ofType: "plist") {
+            if let path = NSBundle.mainBundle().pathForResource("Estadisticas", ofType: "plist") {
                 self.listCalendario = NSDictionary(contentsOfFile:path) as! [String : AnyObject];
                 
             }
             
             if let listCalendarioUnwrapped:[String:AnyObject]  = self.listCalendario {
                 
-                print("mi valor calendario es \(listCalendarioUnwrapped)");
                 
-                for numJornada:Int in 1...self.listCalendario.count {
+                let jugador:AnyObject = listCalendarioUnwrapped["Hugo"]!;
+                let jugadorModel:EstadisticasModel = EstadisticasModel();
+                jugadorModel.nombre = "Hugo";
+                jugadorModel.goles = jugador["Goles"] as! String;
+                jugadorModel.asistencias = jugador["Asistencia"] as! String;
+                jugadorModel.partidosGanados = jugador["PG"] as! String;
+                jugadorModel.partidosJugados = jugador["PJ"] as! String;
+                
+                listCalendarioData.append(jugadorModel);
+                
+                print("mi valor estadistica es \(listCalendarioUnwrapped)");
+                
+                /*for numJornada:Int in 1...self.listCalendario.count {
                     
                     
                     if let valorJornadaUnwrapped:AnyObject = listCalendarioUnwrapped["Jornada" + String(numJornada)] {
@@ -171,39 +193,39 @@ class CatxCalendario: UIViewController,UITableViewDelegate,UITableViewDataSource
                     }
                     
                     
-                }
-        }
-        
+                }*/
+            }
+            
             
             
         }
         //calendarioModel.resultado = listCalendarioDataFirebase[numJornada - 1].resultado;
-       print("termino");
+        print("termino");
         self.tableView.reloadData();
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
+    
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+     // Get the new view controller using segue.destinationViewController.
+     // Pass the selected object to the new view controller.
+     }
+     */
     
     
     
     
     //MARK: - Tableview Delegate & Datasource
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if let listValurJornada:[CalendarioModel] = self.listCalendarioData {
+        if let listValurJornada:[EstadisticasModel] = self.listCalendarioData {
             return listValurJornada.count;
         }
         else {
@@ -233,11 +255,8 @@ class CatxCalendario: UIViewController,UITableViewDelegate,UITableViewDataSource
     {
         let cell = tableView.dequeueReusableCellWithIdentifier(CatxCeldaCalendario.cellId, forIndexPath: indexPath) as! CatxCeldaCalendario;
         
-        let modeloCalendario:CalendarioModel = self.listCalendarioData[indexPath.row];
-        cell.horaLabel.text = modeloCalendario.hora;
-        cell.lugarLabel.text = modeloCalendario.lugar;
-        cell.resultadoLabel.text = modeloCalendario.resultado;
-        cell.rivalLabel.text = modeloCalendario.rival;
+        let modeloCalendario:EstadisticasModel = self.listCalendarioData[indexPath.row];
+        
         
         
         return cell
@@ -245,26 +264,26 @@ class CatxCalendario: UIViewController,UITableViewDelegate,UITableViewDataSource
     }
     
     /*func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        
-        //let header = (tableView.dequeueReusableHeaderFooterViewWithIdentifier(HeaderCeldaPanelAdministrador.cellId)) as! HeaderCeldaPanelAdministrador;
-        let header = (tableView.dequeueReusableCellWithIdentifier(HeaderCeldaPanelAdministrador.cellId)) as! HeaderCeldaPanelAdministrador;
-        
-        
-        
-        if let fetchUnwrapped = fetchedResultsController {
-            if let sectionUnwrapped = fetchUnwrapped.sections {
-                let currentSection:NSFetchedResultsSectionInfo = sectionUnwrapped[section];
-                header.nombreSection.text = currentSection.name;
-                
-            }
-        }
-        
-        
-        
-        return header.contentView;
-        
-        
-    } */
+     
+     //let header = (tableView.dequeueReusableHeaderFooterViewWithIdentifier(HeaderCeldaPanelAdministrador.cellId)) as! HeaderCeldaPanelAdministrador;
+     let header = (tableView.dequeueReusableCellWithIdentifier(HeaderCeldaPanelAdministrador.cellId)) as! HeaderCeldaPanelAdministrador;
+     
+     
+     
+     if let fetchUnwrapped = fetchedResultsController {
+     if let sectionUnwrapped = fetchUnwrapped.sections {
+     let currentSection:NSFetchedResultsSectionInfo = sectionUnwrapped[section];
+     header.nombreSection.text = currentSection.name;
+     
+     }
+     }
+     
+     
+     
+     return header.contentView;
+     
+     
+     } */
     
     func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 40;
@@ -287,5 +306,5 @@ class CatxCalendario: UIViewController,UITableViewDelegate,UITableViewDataSource
     /*func tableView(tableView: UITableView, estimatedHeightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
      return 100;
      }*/
-
+    
 }

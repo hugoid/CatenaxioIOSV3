@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Anton</key>
+	<dict>
+		<key>urlImagen</key>
+		<string>xx</string>
+		<key>Goles</key>
+		<string>4</string>
+		<key>Asistencia</key>
+		<string>5</string>
+		<key>PG</key>
+		<string>3</string>
+		<key>PJ</key>
+		<string>7</string>
+	</dict>
+	<key>Antonio</key>
+    <dict>
+        <key>urlImagen</key>
+        <string>xx</string>
+        <key>Goles</key>
+        <string>4</string>
+        <key>Asistencia</key>
+        <string>5</string>
+        <key>PG</key>
+        <string>3</string>
+        <key>PJ</key>
+        <string>7</string>
+    </dict>
+	<key>Hugo</key>
+    <dict>
+        <key>urlImagen</key>
+        <string>xx</string>
+        <key>Goles</key>
+        <string>4</string>
+        <key>Asistencia</key>
+        <string>5</string>
+        <key>PG</key>
+        <string>3</string>
+        <key>PJ</key>
+        <string>7</string>
+    </dict>
+</dict>
+</plist>

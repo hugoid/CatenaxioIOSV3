@@ -26,7 +26,7 @@
         <!--Estadisticas-->
         <scene sceneID="DfW-3b-fxS">
             <objects>
-                <viewController id="yX8-iV-iRC" sceneMemberID="viewController">
+                <viewController id="yX8-iV-iRC" customClass="CatxEstadisticas" customModule="Catenaxio" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="DDg-mK-RcQ"/>
                         <viewControllerLayoutGuide type="bottom" id="oRw-sm-veC"/>
@@ -34,9 +34,24 @@
                     <view key="view" contentMode="scaleToFill" id="JZo-Tn-ZN5">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="WwV-Wk-0hj">
+                                <rect key="frame" x="0.0" y="64" width="600" height="487"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="oRw-sm-veC" firstAttribute="top" secondItem="WwV-Wk-0hj" secondAttribute="bottom" id="AjW-B6-LgY"/>
+                            <constraint firstItem="WwV-Wk-0hj" firstAttribute="top" secondItem="DDg-mK-RcQ" secondAttribute="bottom" id="IIV-c5-hqe"/>
+                            <constraint firstItem="WwV-Wk-0hj" firstAttribute="leading" secondItem="JZo-Tn-ZN5" secondAttribute="leading" id="Jg5-bH-OtT"/>
+                            <constraint firstAttribute="trailing" secondItem="WwV-Wk-0hj" secondAttribute="trailing" id="gFG-3l-7Ke"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Estadisticas" id="KDg-ly-kIM"/>
+                    <connections>
+                        <outlet property="tableView" destination="WwV-Wk-0hj" id="n4x-3D-5gL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1x2-c2-FKk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
