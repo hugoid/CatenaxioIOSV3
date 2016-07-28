@@ -50,9 +50,9 @@ class CatxCalendario: UIViewController,UITableViewDelegate,UITableViewDataSource
     }
     
     func downloadFireBaseData () -> Void {
-        self.ref = FIRDatabase.database().reference()
-        
-       
+        self.ref = FIRDatabase.database().reference().child("Calendario");
+        print("mi self.ref es \(self.ref)");
+        print("ok");
         
         if let refUnwrapped = self.ref {
             

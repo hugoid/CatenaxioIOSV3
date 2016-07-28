@@ -25,13 +25,20 @@ class CatxEstadisticas: UIViewController,UITableViewDelegate,UITableViewDataSour
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Calendario";
+        
         // Do any additional setup after loading the view.
     }
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(true);
-        /*if Reachability.isConnectedToNetwork() == true {
+        
+        //barra de navegacion
+        self.setupUI();
+        
+        
+        
+        
+        if Reachability.isConnectedToNetwork() == true {
             print("Internet connection OK")
             self.downloadFireBaseData();
         } else {
@@ -40,15 +47,17 @@ class CatxEstadisticas: UIViewController,UITableViewDelegate,UITableViewDataSour
             self.setup();
             self.loadData();
             self.downloadFireBaseData();
-        }*/
+        }
         
         
-        self.setup();
-        self.loadData();
+        //self.setup();
+        //self.loadData();
         
         
         
     }
+    
+    
     
     func downloadFireBaseData () -> Void {
         self.ref = FIRDatabase.database().reference()
@@ -69,11 +78,13 @@ class CatxEstadisticas: UIViewController,UITableViewDelegate,UITableViewDataSour
                         
                         let miJugador:EstadisticasModel = EstadisticasModel();
                         miJugador.nombre = jugador.valueForKey("Nombre") as! String;
-                        miJugador.asistencias = jugador.valueForKey("Asistencias") as! String;
-                        miJugador.goles = jugador.valueForKey("Goles") as! String;
-                        miJugador.partidosGanados = jugador.valueForKey("PG") as! String;
-                        miJugador.partidosJugados = jugador.valueForKey("PJ") as! String;
-                        miJugador.urlImagenJugador = "xx";
+                        miJugador.asistencias = String(jugador.valueForKey("Asistencias")!);
+                        miJugador.goles = String(jugador.valueForKey("Goles")!);
+                        miJugador.partidosGanados = String(jugador.valueForKey("PG")!);
+                        miJugador.partidosJugados = String(jugador.valueForKey("PJ")!);
+                        let imagenJugador : CatxImagenJugador = CatxImagenJugador();
+                        miJugador.urlImagenJugador = imagenJugador.getURLImageForName(miJugador.nombre);
+                        self.listCalendarioDataFirebase.append(miJugador);
                         
                     }
                     
@@ -105,13 +116,53 @@ class CatxEstadisticas: UIViewController,UITableViewDelegate,UITableViewDataSour
         
     }
     
+    // MARK: - Setup Color UI
+    func setupUI () -> Void {
+        self.tabBarController?.navigationItem.title = "My Title"
+        let buttonSinc:UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Refresh, target: self, action: #selector(CatxEstadisticas.pushSynData));
+        let buttonShowGraph:UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Search, target: self, action: #selector(CatxEstadisticas.pushShowGraph));
+        self.tabBarController?.navigationItem.rightBarButtonItems = [buttonShowGraph,buttonSinc];
+        //self.tabBarController?.tabBar.translucent = false;
+        //self.tabBarController?.tabBar.tintColor = UIColor(red: 48/255, green: 67/255, blue: 74/255, alpha: 1);
+        //self.tabBarController?.tabBar.barTintColor = UIColor.whiteColor(); //fondo barra abajo
+        self.tabBarController?.navigationController?.navigationBar.barTintColor = UIColor(red: 68/255, green: 146/255, blue: 132/255, alpha: 1);
+        self.tabBarController?.navigationController?.navigationBar.tintColor = UIColor.whiteColor();
+        self.tabBarController?.navigationController?.navigationBar.translucent = true;
+        let titleDict: NSDictionary = [NSForegroundColorAttributeName: UIColor.whiteColor()];
+        self.tabBarController?.navigationController?.navigationBar.titleTextAttributes = titleDict as? [String : AnyObject];
+    
+        //gradient
+        let vista : UIView = self.view;
+        let gradient : CAGradientLayer = CAGradientLayer()
+        gradient.frame = vista.bounds
+        
+        let cor1 = UIColor(red: 17/255, green: 124/255, blue: 104/255, alpha: 1).CGColor;
+        let cor2 = UIColor(red: 48/255, green: 67/255, blue: 74/255, alpha: 1).CGColor;
+        let arrayColors = [cor1, cor2]
+        
+        gradient.colors = arrayColors
+        self.view.layer.insertSublayer(gradient, atIndex: 0)
+    }
+    
+    // MARK: - Setup Table
     func setup () -> Void {
-        self.tableView.registerNib(UINib(nibName: "CatxCeldaCalendario", bundle: nil), forCellReuseIdentifier: CatxCeldaCalendario.cellId);
+        self.tableView.registerNib(UINib(nibName: "CatxCeldaEstadisticas", bundle: nil), forCellReuseIdentifier: CatxCeldaEstadisticas.cellId);
+        self.tableView.registerNib(UINib(nibName: "CatxHeaderEstadisticas", bundle: nil), forCellReuseIdentifier: CatxHeaderEstadisticas.cellId);
         
         //self.tableView.registerNib(UINib(nibName: "HeaderCeldaPanelAdministrador", bundle: nil), forHeaderFooterViewReuseIdentifier: HeaderCeldaPanelAdministrador.cellId);
         self.tableView.delegate = self;
         self.tableView.dataSource = self;
         self.tableView.rowHeight = UITableViewAutomaticDimension;
+    }
+    
+    // MARK: - Push Button
+    
+    func pushSynData () -> Void{
+        print("push sync");
+    }
+    
+    func pushShowGraph () -> Void {
+        print("push grahp");
     }
     
     // MARK: - Cargar Modelo
@@ -253,37 +304,33 @@ class CatxEstadisticas: UIViewController,UITableViewDelegate,UITableViewDataSour
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
-        let cell = tableView.dequeueReusableCellWithIdentifier(CatxCeldaCalendario.cellId, forIndexPath: indexPath) as! CatxCeldaCalendario;
+        let cell = tableView.dequeueReusableCellWithIdentifier(CatxCeldaEstadisticas.cellId, forIndexPath: indexPath) as! CatxCeldaEstadisticas;
         
         let modeloCalendario:EstadisticasModel = self.listCalendarioData[indexPath.row];
         
-        
+        cell.partidosJugadosCeldaEstadistica.text = modeloCalendario.partidosJugados;
+        cell.partidosGanadosCeldaEstadisticas.text = modeloCalendario.partidosGanados;
+        cell.asistenciasCeldaEstadisticas.text = modeloCalendario.asistencias;
+        cell.golesCeldaEstadisticas.text = modeloCalendario.goles;
+        cell.backgroundColor = UIColor.clearColor();
         
         return cell
         
     }
     
-    /*func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+    func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
      
      //let header = (tableView.dequeueReusableHeaderFooterViewWithIdentifier(HeaderCeldaPanelAdministrador.cellId)) as! HeaderCeldaPanelAdministrador;
-     let header = (tableView.dequeueReusableCellWithIdentifier(HeaderCeldaPanelAdministrador.cellId)) as! HeaderCeldaPanelAdministrador;
+     let header = (tableView.dequeueReusableCellWithIdentifier(CatxHeaderEstadisticas.cellId)) as! CatxHeaderEstadisticas;
      
-     
-     
-     if let fetchUnwrapped = fetchedResultsController {
-     if let sectionUnwrapped = fetchUnwrapped.sections {
-     let currentSection:NSFetchedResultsSectionInfo = sectionUnwrapped[section];
-     header.nombreSection.text = currentSection.name;
-     
-     }
-     }
-     
+        header.contentView.backgroundColor = UIColor(red: 68/255, green: 146/255, blue: 132/255, alpha: 1);
      
      
      return header.contentView;
      
      
-     } */
+     }
+   
     
     func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 40;

@@ -7,21 +7,21 @@
 	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
 	<string>ca-app-pub-3940256099942544/4411468910</string>
 	<key>CLIENT_ID</key>
-	<string>759058763047-60khb38pgbi29j10e1lc1vdbhj7i48fo.apps.googleusercontent.com</string>
+	<string>953959742242-ertqnmuqalkqikhatpirenq10o3ivakk.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.759058763047-60khb38pgbi29j10e1lc1vdbhj7i48fo</string>
+	<string>com.googleusercontent.apps.953959742242-ertqnmuqalkqikhatpirenq10o3ivakk</string>
 	<key>API_KEY</key>
-	<string>AIzaSyCI8JcatdguCWpOVPcJp9t9uHbK-WV4xm4</string>
+	<string>AIzaSyCmfwUgmlQkP1Z1Nx2jowCT6wMxebKDLPk</string>
 	<key>GCM_SENDER_ID</key>
-	<string>759058763047</string>
+	<string>953959742242</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
 	<string>catenaxio.Catenaxio</string>
 	<key>PROJECT_ID</key>
-	<string>catenaxio-9a843</string>
+	<string>catenaxio-dd230</string>
 	<key>STORAGE_BUCKET</key>
-	<string>catenaxio-9a843.appspot.com</string>
+	<string>catenaxio-dd230.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<true/>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -33,8 +33,8 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true/>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:759058763047:ios:b8a3c7bc61931184</string>
+	<string>1:953959742242:ios:b8a3c7bc61931184</string>
 	<key>DATABASE_URL</key>
-	<string>https://catenaxio-9a843.firebaseio.com</string>
+	<string>https://catenaxio-dd230.firebaseio.com</string>
 </dict>
 </plist>

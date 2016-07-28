@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="u9N-t5-qS8">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="u9N-t5-qS8">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -35,9 +35,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="WwV-Wk-0hj">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="WwV-Wk-0hj">
                                 <rect key="frame" x="0.0" y="64" width="600" height="487"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -60,7 +60,7 @@
         <!--Clasificacion-->
         <scene sceneID="0GY-3Y-PAk">
             <objects>
-                <viewController id="eeB-It-FGD" sceneMemberID="viewController">
+                <viewController id="eeB-It-FGD" customClass="CatxClasificacion" customModule="Catenaxio" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="QoJ-5b-4ET"/>
                         <viewControllerLayoutGuide type="bottom" id="cGr-em-jL3"/>
@@ -68,9 +68,23 @@
                     <view key="view" contentMode="scaleToFill" id="ozD-er-cIr">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ejemplo" translatesAutoresizingMaskIntoConstraints="NO" id="6fv-wu-S7I">
+                                <rect key="frame" x="0.0" y="64" width="600" height="487"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.32668200339999998" blue="0.89066063809999996" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="6fv-wu-S7I" firstAttribute="leading" secondItem="ozD-er-cIr" secondAttribute="leading" id="7Xj-e3-7WZ"/>
+                            <constraint firstAttribute="trailing" secondItem="6fv-wu-S7I" secondAttribute="trailing" id="OP9-mQ-qqg"/>
+                            <constraint firstItem="cGr-em-jL3" firstAttribute="top" secondItem="6fv-wu-S7I" secondAttribute="bottom" id="YYI-vB-hus"/>
+                            <constraint firstItem="6fv-wu-S7I" firstAttribute="top" secondItem="QoJ-5b-4ET" secondAttribute="bottom" id="dHr-QZ-UA8"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Clasificacion" id="tZe-mK-3Nl"/>
+                    <connections>
+                        <outlet property="imageClasificacion" destination="6fv-wu-S7I" id="J60-3E-MNh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nMU-7y-QdE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -131,4 +145,7 @@
             <point key="canvasLocation" x="459" y="963"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="ejemplo" width="976" height="1540"/>
+    </resources>
 </document>
