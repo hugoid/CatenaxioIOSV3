@@ -163,6 +163,9 @@ class CatxEstadisticas: UIViewController,UITableViewDelegate,UITableViewDataSour
     
     func pushShowGraph () -> Void {
         print("push grahp");
+        let graficas:CatxWebGrafica = CatxWebGrafica(arrayEstadisticas: self.listCalendarioData)!;
+        self.navigationController?.pushViewController(graficas, animated: true);
+        
     }
     
     // MARK: - Cargar Modelo

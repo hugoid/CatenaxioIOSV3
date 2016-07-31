@@ -32,6 +32,10 @@
 		1EDF17131D3E234C00A34935 /* CatxCeldaCalendario.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1EDF17111D3E234C00A34935 /* CatxCeldaCalendario.xib */; };
 		1EDF17161D3E27DB00A34935 /* Calendario.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1EDF17151D3E27DB00A34935 /* Calendario.plist */; };
 		1EDF17181D3E2BCD00A34935 /* CalendarioModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDF17171D3E2BCD00A34935 /* CalendarioModel.swift */; };
+		21C340461D4E09C3007B85D7 /* CatxWebGrafica.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C340441D4E09C3007B85D7 /* CatxWebGrafica.swift */; };
+		21C340471D4E09C3007B85D7 /* CatxWebGrafica.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21C340451D4E09C3007B85D7 /* CatxWebGrafica.xib */; };
+		21C3404A1D4E0DBC007B85D7 /* ejemplo3.html in Resources */ = {isa = PBXBuildFile; fileRef = 21C340491D4E0DBC007B85D7 /* ejemplo3.html */; };
+		21C3404C1D4E0FDD007B85D7 /* ejemplo2.html in Resources */ = {isa = PBXBuildFile; fileRef = 21C3404B1D4E0FDD007B85D7 /* ejemplo2.html */; };
 		DFF8A923070808A2EA0A7A94 /* libPods-Catenaxio.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E8187ED9C3CA52807DC92023 /* libPods-Catenaxio.a */; };
 /* End PBXBuildFile section */
 
@@ -84,6 +88,10 @@
 		1EDF17111D3E234C00A34935 /* CatxCeldaCalendario.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CatxCeldaCalendario.xib; sourceTree = "<group>"; };
 		1EDF17151D3E27DB00A34935 /* Calendario.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Calendario.plist; sourceTree = "<group>"; };
 		1EDF17171D3E2BCD00A34935 /* CalendarioModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarioModel.swift; sourceTree = "<group>"; };
+		21C340441D4E09C3007B85D7 /* CatxWebGrafica.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatxWebGrafica.swift; sourceTree = "<group>"; };
+		21C340451D4E09C3007B85D7 /* CatxWebGrafica.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CatxWebGrafica.xib; sourceTree = "<group>"; };
+		21C340491D4E0DBC007B85D7 /* ejemplo3.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = ejemplo3.html; sourceTree = "<group>"; };
+		21C3404B1D4E0FDD007B85D7 /* ejemplo2.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = ejemplo2.html; sourceTree = "<group>"; };
 		2FC67B021CFD4333A19D9EDA /* Pods-Catenaxio.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Catenaxio.release.xcconfig"; path = "Pods/Target Support Files/Pods-Catenaxio/Pods-Catenaxio.release.xcconfig"; sourceTree = "<group>"; };
 		8D338289B2B9331D6E4C593B /* Pods-Catenaxio.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Catenaxio.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Catenaxio/Pods-Catenaxio.debug.xcconfig"; sourceTree = "<group>"; };
 		E8187ED9C3CA52807DC92023 /* libPods-Catenaxio.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Catenaxio.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -220,6 +228,7 @@
 		1E6D0E161D3E168800A1F970 /* Controladores */ = {
 			isa = PBXGroup;
 			children = (
+				21C340431D4E098B007B85D7 /* WebGraphic */,
 				1ED133431D49FEBD00E5877E /* Clasificacion */,
 				1E57BBFC1D423D5B00707E6D /* Estadisticas */,
 				1EDF170B1D3E1DDE00A34935 /* Calendario */,
@@ -304,6 +313,25 @@
 				1EB9C5131D3F7641009DC3C8 /* CalendarioModeloFirebase.swift */,
 			);
 			name = data;
+			sourceTree = "<group>";
+		};
+		21C340431D4E098B007B85D7 /* WebGraphic */ = {
+			isa = PBXGroup;
+			children = (
+				21C340481D4E0D9B007B85D7 /* html */,
+				21C340441D4E09C3007B85D7 /* CatxWebGrafica.swift */,
+				21C340451D4E09C3007B85D7 /* CatxWebGrafica.xib */,
+			);
+			name = WebGraphic;
+			sourceTree = "<group>";
+		};
+		21C340481D4E0D9B007B85D7 /* html */ = {
+			isa = PBXGroup;
+			children = (
+				21C3404B1D4E0FDD007B85D7 /* ejemplo2.html */,
+				21C340491D4E0DBC007B85D7 /* ejemplo3.html */,
+			);
+			name = html;
 			sourceTree = "<group>";
 		};
 		B982B92DD2EF26BC8EB0B834 /* Frameworks */ = {
@@ -433,10 +461,13 @@
 			files = (
 				1E58176F1D351F55004C0FC0 /* LaunchScreen.storyboard in Resources */,
 				1E58176C1D351F55004C0FC0 /* Assets.xcassets in Resources */,
+				21C3404C1D4E0FDD007B85D7 /* ejemplo2.html in Resources */,
 				1E5C31471D489E4E00FAB93F /* GoogleService-Info.plist in Resources */,
 				1E58176A1D351F55004C0FC0 /* Main.storyboard in Resources */,
+				21C340471D4E09C3007B85D7 /* CatxWebGrafica.xib in Resources */,
 				1EDF17161D3E27DB00A34935 /* Calendario.plist in Resources */,
 				1E1A2D951D47586B00CABEFA /* CatxCeldaEstadisticas.xib in Resources */,
+				21C3404A1D4E0DBC007B85D7 /* ejemplo3.html in Resources */,
 				1E118A811D42465F000BDE12 /* Estadisticas.plist in Resources */,
 				1EDF17131D3E234C00A34935 /* CatxCeldaCalendario.xib in Resources */,
 				1E99E19C1D476D8100E1D355 /* CatxHeaderEstadisticas.xib in Resources */,
@@ -522,6 +553,7 @@
 				1E99E19A1D476D7100E1D355 /* CatxHeaderEstadisticas.swift in Sources */,
 				1EB9C5141D3F7641009DC3C8 /* CalendarioModeloFirebase.swift in Sources */,
 				1EDF17121D3E234C00A34935 /* CatxCeldaCalendario.swift in Sources */,
+				21C340461D4E09C3007B85D7 /* CatxWebGrafica.swift in Sources */,
 				1E5424C11D3F8DD700C14619 /* Reachability.swift in Sources */,
 				1E118A7F1D424063000BDE12 /* EstadisticasModel.swift in Sources */,
 				1EDF170A1D3E1D6100A34935 /* CatxTabBarController.swift in Sources */,

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+        <script type="text/javascript">
+            google.load("visualization", "1", {packages:["corechart"]});
+            google.setOnLoadCallback(drawChart);
+            function myFunction()
+            {
+                alert("Hello World!");
+            }
+        function myFunction2(parametro1,parametro2)
+        {
+            alert(parametro1+parametro2+'hugo');
+        }
+        
+        function drawChart(abelG,abelD,jordan,anton,cano,meri,hugo,juanma,juan,invitado,titulo) {
+            //var a = parseInt(abelG) ;
+            //alert(a + 'jj');
+            //alert(abelD+'jj');
+            
+            var data = google.visualization.arrayToDataTable([
+                                                              ['Task', titulo],
+                                                              ['abelG',     abelG],
+                                                              ['abelD',      abelD],
+                                                              ['jordan',  jordan],
+                                                              ['anton', anton],
+                                                              ['cano',    cano],
+                                                              ['meri',    meri],
+                                                              ['hugo',    hugo],
+                                                              ['juanma',   juanma],
+                                                              ['juan',    juan],
+                                                              ['invitado',    invitado]
+                                                              ]);
+                                                              
+                                                              var options = {
+                                                                  title: titulo+' %',
+                                                                  pieHole: 0.4,
+                                                              };
+                                                              
+                                                              var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
+                                                              chart.draw(data, options);
+                                                              
+                                                              
+        }
+        
+        function drawChart2() {
+            var data = google.visualization.arrayToDataTable([
+                                                              ['Task', 'Goles'],
+                                                              ['abelG',     11],
+                                                              ['abelD',      2],
+                                                              ['jordan',  2],
+                                                              ['Watch TV', 2],
+                                                              ['Sleep',    7]
+                                                              ]);
+                                                              
+                                                              var options = {
+                                                                  title: 'My Daily Activities',
+                                                                  pieHole: 0.4,
+                                                              };
+                                                              
+                                                              var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
+                                                              chart.draw(data, options);
+        }
+        
+            </script>
+    </head>
+    <body>
+        <div id="donutchart" style="width: 900px; height: 900px;"></div>
+    </body>
+    
+</html>
