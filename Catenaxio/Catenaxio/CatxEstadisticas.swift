@@ -35,7 +35,9 @@ class CatxEstadisticas: UIViewController,UITableViewDelegate,UITableViewDataSour
         //barra de navegacion
         self.setupUI();
         
-        
+        listCalendario = [String : AnyObject]();
+        listCalendarioData = [EstadisticasModel]();
+        listCalendarioDataFirebase = [EstadisticasModel]();
         
         
         if Reachability.isConnectedToNetwork() == true {

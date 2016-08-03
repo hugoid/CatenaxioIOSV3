@@ -36,7 +36,7 @@
 		21C340471D4E09C3007B85D7 /* CatxWebGrafica.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21C340451D4E09C3007B85D7 /* CatxWebGrafica.xib */; };
 		21C3404A1D4E0DBC007B85D7 /* ejemplo3.html in Resources */ = {isa = PBXBuildFile; fileRef = 21C340491D4E0DBC007B85D7 /* ejemplo3.html */; };
 		21C3404C1D4E0FDD007B85D7 /* ejemplo2.html in Resources */ = {isa = PBXBuildFile; fileRef = 21C3404B1D4E0FDD007B85D7 /* ejemplo2.html */; };
-		33DE0123FBC2E21621BDB195 /* libPods-Catenaxio.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3447D8A3D29D7E0EC0B7A620 /* libPods-Catenaxio.a */; };
+		5AB45D531A2D8A915DE7A1FC /* libPods-Catenaxio.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DD5B9283896C45BEE2450169 /* libPods-Catenaxio.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,13 +88,13 @@
 		1EDF17111D3E234C00A34935 /* CatxCeldaCalendario.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CatxCeldaCalendario.xib; sourceTree = "<group>"; };
 		1EDF17151D3E27DB00A34935 /* Calendario.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Calendario.plist; sourceTree = "<group>"; };
 		1EDF17171D3E2BCD00A34935 /* CalendarioModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarioModel.swift; sourceTree = "<group>"; };
-		20BC1A9E2966E2264D836949 /* Pods-Catenaxio.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Catenaxio.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Catenaxio/Pods-Catenaxio.debug.xcconfig"; sourceTree = "<group>"; };
 		21C340441D4E09C3007B85D7 /* CatxWebGrafica.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatxWebGrafica.swift; sourceTree = "<group>"; };
 		21C340451D4E09C3007B85D7 /* CatxWebGrafica.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CatxWebGrafica.xib; sourceTree = "<group>"; };
 		21C340491D4E0DBC007B85D7 /* ejemplo3.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = ejemplo3.html; sourceTree = "<group>"; };
 		21C3404B1D4E0FDD007B85D7 /* ejemplo2.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = ejemplo2.html; sourceTree = "<group>"; };
-		3447D8A3D29D7E0EC0B7A620 /* libPods-Catenaxio.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Catenaxio.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		E03E1E60F6AAE1666AE9623B /* Pods-Catenaxio.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Catenaxio.release.xcconfig"; path = "Pods/Target Support Files/Pods-Catenaxio/Pods-Catenaxio.release.xcconfig"; sourceTree = "<group>"; };
+		4AD3AD8256028A70A15627E4 /* Pods-Catenaxio.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Catenaxio.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Catenaxio/Pods-Catenaxio.debug.xcconfig"; sourceTree = "<group>"; };
+		DD5B9283896C45BEE2450169 /* libPods-Catenaxio.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Catenaxio.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E0E4EBC1B2C18DFFB30B4E1C /* Pods-Catenaxio.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Catenaxio.release.xcconfig"; path = "Pods/Target Support Files/Pods-Catenaxio/Pods-Catenaxio.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,7 +102,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				33DE0123FBC2E21621BDB195 /* libPods-Catenaxio.a in Frameworks */,
+				5AB45D531A2D8A915DE7A1FC /* libPods-Catenaxio.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -123,6 +123,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0B736B69381C0E6404135447 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DD5B9283896C45BEE2450169 /* libPods-Catenaxio.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		1E118A7C1D424013000BDE12 /* data */ = {
 			isa = PBXGroup;
 			children = (
@@ -175,8 +183,8 @@
 				1E5817781D351F55004C0FC0 /* CatenaxioTests */,
 				1E5817831D351F55004C0FC0 /* CatenaxioUITests */,
 				1E5817621D351F55004C0FC0 /* Products */,
-				CAB87FC29251537EB115E587 /* Pods */,
-				883B5977B1EA5F220A5D0C11 /* Frameworks */,
+				53B61AA675EE291E4704BD09 /* Pods */,
+				0B736B69381C0E6404135447 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -334,19 +342,11 @@
 			name = html;
 			sourceTree = "<group>";
 		};
-		883B5977B1EA5F220A5D0C11 /* Frameworks */ = {
+		53B61AA675EE291E4704BD09 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				3447D8A3D29D7E0EC0B7A620 /* libPods-Catenaxio.a */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		CAB87FC29251537EB115E587 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				20BC1A9E2966E2264D836949 /* Pods-Catenaxio.debug.xcconfig */,
-				E03E1E60F6AAE1666AE9623B /* Pods-Catenaxio.release.xcconfig */,
+				4AD3AD8256028A70A15627E4 /* Pods-Catenaxio.debug.xcconfig */,
+				E0E4EBC1B2C18DFFB30B4E1C /* Pods-Catenaxio.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -699,7 +699,7 @@
 		};
 		1E58178A1D351F55004C0FC0 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 20BC1A9E2966E2264D836949 /* Pods-Catenaxio.debug.xcconfig */;
+			baseConfigurationReference = 4AD3AD8256028A70A15627E4 /* Pods-Catenaxio.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -715,7 +715,7 @@
 		};
 		1E58178B1D351F55004C0FC0 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E03E1E60F6AAE1666AE9623B /* Pods-Catenaxio.release.xcconfig */;
+			baseConfigurationReference = E0E4EBC1B2C18DFFB30B4E1C /* Pods-Catenaxio.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";

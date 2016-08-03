@@ -31,13 +31,20 @@ class CatxCalendario: UIViewController,UITableViewDelegate,UITableViewDataSource
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(true);
+        
+        self.setup();
+        
+        listCalendario = [String : AnyObject]();
+        listCalendarioData = [CalendarioModel]();
+        listCalendarioDataFirebase = [CalendarioModel]();
+        
         if Reachability.isConnectedToNetwork() == true {
             print("Internet connection OK")
             self.downloadFireBaseData();
         } else {
             print("Internet connection FAILED")
             
-            self.setup();
+            
             self.loadData();
             self.downloadFireBaseData();
         }
