@@ -32,6 +32,8 @@
 		1EDF17131D3E234C00A34935 /* CatxCeldaCalendario.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1EDF17111D3E234C00A34935 /* CatxCeldaCalendario.xib */; };
 		1EDF17161D3E27DB00A34935 /* Calendario.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1EDF17151D3E27DB00A34935 /* Calendario.plist */; };
 		1EDF17181D3E2BCD00A34935 /* CalendarioModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDF17171D3E2BCD00A34935 /* CalendarioModel.swift */; };
+		2111BAA61D57A0B4000D46FE /* FotosNombre.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2111BAA51D57A0B4000D46FE /* FotosNombre.swift */; };
+		2111BAA81D57A706000D46FE /* UIImageView+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2111BAA71D57A706000D46FE /* UIImageView+Utils.swift */; };
 		21C340461D4E09C3007B85D7 /* CatxWebGrafica.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C340441D4E09C3007B85D7 /* CatxWebGrafica.swift */; };
 		21C340471D4E09C3007B85D7 /* CatxWebGrafica.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21C340451D4E09C3007B85D7 /* CatxWebGrafica.xib */; };
 		21C3404A1D4E0DBC007B85D7 /* ejemplo3.html in Resources */ = {isa = PBXBuildFile; fileRef = 21C340491D4E0DBC007B85D7 /* ejemplo3.html */; };
@@ -88,6 +90,8 @@
 		1EDF17111D3E234C00A34935 /* CatxCeldaCalendario.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CatxCeldaCalendario.xib; sourceTree = "<group>"; };
 		1EDF17151D3E27DB00A34935 /* Calendario.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Calendario.plist; sourceTree = "<group>"; };
 		1EDF17171D3E2BCD00A34935 /* CalendarioModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarioModel.swift; sourceTree = "<group>"; };
+		2111BAA51D57A0B4000D46FE /* FotosNombre.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FotosNombre.swift; sourceTree = "<group>"; };
+		2111BAA71D57A706000D46FE /* UIImageView+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Utils.swift"; sourceTree = "<group>"; };
 		21C340441D4E09C3007B85D7 /* CatxWebGrafica.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatxWebGrafica.swift; sourceTree = "<group>"; };
 		21C340451D4E09C3007B85D7 /* CatxWebGrafica.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CatxWebGrafica.xib; sourceTree = "<group>"; };
 		21C340491D4E0DBC007B85D7 /* ejemplo3.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = ejemplo3.html; sourceTree = "<group>"; };
@@ -201,6 +205,7 @@
 		1E5817631D351F55004C0FC0 /* Catenaxio */ = {
 			isa = PBXGroup;
 			children = (
+				2111BAA41D57A0A2000D46FE /* utils */,
 				1E99E19D1D47726700E1D355 /* ImagenesJugador */,
 				1E5424BF1D3F8DC700C14619 /* Network */,
 				1E6D0E171D3E168E00A1F970 /* storyboards */,
@@ -321,6 +326,15 @@
 				1EB9C5131D3F7641009DC3C8 /* CalendarioModeloFirebase.swift */,
 			);
 			name = data;
+			sourceTree = "<group>";
+		};
+		2111BAA41D57A0A2000D46FE /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				2111BAA51D57A0B4000D46FE /* FotosNombre.swift */,
+				2111BAA71D57A706000D46FE /* UIImageView+Utils.swift */,
+			);
+			name = utils;
 			sourceTree = "<group>";
 		};
 		21C340431D4E098B007B85D7 /* WebGraphic */ = {
@@ -553,6 +567,8 @@
 				1E99E19A1D476D7100E1D355 /* CatxHeaderEstadisticas.swift in Sources */,
 				1EB9C5141D3F7641009DC3C8 /* CalendarioModeloFirebase.swift in Sources */,
 				1EDF17121D3E234C00A34935 /* CatxCeldaCalendario.swift in Sources */,
+				2111BAA61D57A0B4000D46FE /* FotosNombre.swift in Sources */,
+				2111BAA81D57A706000D46FE /* UIImageView+Utils.swift in Sources */,
 				21C340461D4E09C3007B85D7 /* CatxWebGrafica.swift in Sources */,
 				1E5424C11D3F8DD700C14619 /* Reachability.swift in Sources */,
 				1E118A7F1D424063000BDE12 /* EstadisticasModel.swift in Sources */,

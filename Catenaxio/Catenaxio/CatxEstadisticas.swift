@@ -154,7 +154,7 @@ class CatxEstadisticas: UIViewController,UITableViewDelegate,UITableViewDataSour
         //self.tableView.registerNib(UINib(nibName: "HeaderCeldaPanelAdministrador", bundle: nil), forHeaderFooterViewReuseIdentifier: HeaderCeldaPanelAdministrador.cellId);
         self.tableView.delegate = self;
         self.tableView.dataSource = self;
-        self.tableView.rowHeight = UITableViewAutomaticDimension;
+        //self.tableView.rowHeight = UITableViewAutomaticDimension;
     }
     
     // MARK: - Push Button
@@ -317,6 +317,14 @@ class CatxEstadisticas: UIViewController,UITableViewDelegate,UITableViewDataSour
         cell.partidosGanadosCeldaEstadisticas.text = modeloCalendario.partidosGanados;
         cell.asistenciasCeldaEstadisticas.text = modeloCalendario.asistencias;
         cell.golesCeldaEstadisticas.text = modeloCalendario.goles;
+        //foto
+        let crearFoto:FotosNombre = FotosNombre();
+        let imagenJugador:UIImage = crearFoto.getImageWithName(modeloCalendario.nombre);
+        cell.imageCeldaEstadisticas.image = imagenJugador;
+        cell.imageCeldaEstadisticas.roundImage();
+        
+       
+        
         cell.backgroundColor = UIColor.clearColor();
         
         return cell
@@ -354,7 +362,9 @@ class CatxEstadisticas: UIViewController,UITableViewDelegate,UITableViewDataSour
         
         
     }
-    
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 85;
+    }
     /*func tableView(tableView: UITableView, estimatedHeightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
      return 100;
      }*/
