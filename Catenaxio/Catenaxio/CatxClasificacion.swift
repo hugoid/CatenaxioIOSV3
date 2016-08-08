@@ -15,7 +15,7 @@ class CatxClasificacion: UIViewController {
     @IBOutlet weak var imageClasificacion: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.setupUI();
         // Do any additional setup after loading the view.
     }
     
@@ -23,7 +23,7 @@ class CatxClasificacion: UIViewController {
         super.viewWillAppear(true);
         
         //barra de navegacion
-        self.setupUI();
+        
         
         
         // Points to the root reference

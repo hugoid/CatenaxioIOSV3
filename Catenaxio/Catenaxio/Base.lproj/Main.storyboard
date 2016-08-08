@@ -48,7 +48,7 @@
                             <constraint firstAttribute="trailing" secondItem="WwV-Wk-0hj" secondAttribute="trailing" id="gFG-3l-7Ke"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Estadisticas" id="KDg-ly-kIM"/>
+                    <tabBarItem key="tabBarItem" title="Estadisticas" image="iconoClasificacion" id="KDg-ly-kIM"/>
                     <connections>
                         <outlet property="tableView" destination="WwV-Wk-0hj" id="n4x-3D-5gL"/>
                     </connections>
@@ -81,7 +81,7 @@
                             <constraint firstItem="6fv-wu-S7I" firstAttribute="top" secondItem="QoJ-5b-4ET" secondAttribute="bottom" id="dHr-QZ-UA8"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Clasificacion" id="tZe-mK-3Nl"/>
+                    <tabBarItem key="tabBarItem" title="Clasificacion" image="iconoCopa" id="tZe-mK-3Nl"/>
                     <connections>
                         <outlet property="imageClasificacion" destination="6fv-wu-S7I" id="J60-3E-MNh"/>
                     </connections>
@@ -104,7 +104,7 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ttW-Uc-dFk">
                                 <rect key="frame" x="0.0" y="64" width="600" height="487"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -115,7 +115,7 @@
                             <constraint firstItem="ttW-Uc-dFk" firstAttribute="top" secondItem="vwC-PR-3DO" secondAttribute="bottom" id="sjz-nt-efu"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Calendario" id="kw0-Mr-20g"/>
+                    <tabBarItem key="tabBarItem" title="Calendario" image="iconoCalendario" id="kw0-Mr-20g"/>
                     <connections>
                         <outlet property="tableView" destination="ttW-Uc-dFk" id="Xh9-xr-Cik"/>
                     </connections>
@@ -147,5 +147,8 @@
     </scenes>
     <resources>
         <image name="ejemplo" width="976" height="1540"/>
+        <image name="iconoCalendario" width="40" height="40"/>
+        <image name="iconoClasificacion" width="40" height="40"/>
+        <image name="iconoCopa" width="40" height="40"/>
     </resources>
 </document>

@@ -21,6 +21,8 @@
 		1E58177A1D351F55004C0FC0 /* CatenaxioTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5817791D351F55004C0FC0 /* CatenaxioTests.swift */; };
 		1E5817851D351F55004C0FC0 /* CatenaxioUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5817841D351F55004C0FC0 /* CatenaxioUITests.swift */; };
 		1E5C31471D489E4E00FAB93F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1E5C31461D489E4E00FAB93F /* GoogleService-Info.plist */; };
+		1E82D3141D58914400B927D9 /* FotosEstadio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E82D3131D58914400B927D9 /* FotosEstadio.swift */; };
+		1E82D3171D589A5C00B927D9 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E82D3161D589A5C00B927D9 /* Constants.swift */; };
 		1E99E19A1D476D7100E1D355 /* CatxHeaderEstadisticas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E99E1991D476D7100E1D355 /* CatxHeaderEstadisticas.swift */; };
 		1E99E19C1D476D8100E1D355 /* CatxHeaderEstadisticas.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E99E19B1D476D8100E1D355 /* CatxHeaderEstadisticas.xib */; };
 		1E99E19F1D4772A000E1D355 /* CatxImagenJugador.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E99E19E1D4772A000E1D355 /* CatxImagenJugador.swift */; };
@@ -79,6 +81,8 @@
 		1E5817841D351F55004C0FC0 /* CatenaxioUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatenaxioUITests.swift; sourceTree = "<group>"; };
 		1E5817861D351F55004C0FC0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1E5C31461D489E4E00FAB93F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		1E82D3131D58914400B927D9 /* FotosEstadio.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FotosEstadio.swift; sourceTree = "<group>"; };
+		1E82D3161D589A5C00B927D9 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		1E99E1991D476D7100E1D355 /* CatxHeaderEstadisticas.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatxHeaderEstadisticas.swift; sourceTree = "<group>"; };
 		1E99E19B1D476D8100E1D355 /* CatxHeaderEstadisticas.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CatxHeaderEstadisticas.xib; sourceTree = "<group>"; };
 		1E99E19E1D4772A000E1D355 /* CatxImagenJugador.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatxImagenJugador.swift; sourceTree = "<group>"; };
@@ -205,8 +209,9 @@
 		1E5817631D351F55004C0FC0 /* Catenaxio */ = {
 			isa = PBXGroup;
 			children = (
+				1E82D3151D589A5000B927D9 /* Definition */,
+				1E82D3111D58912000B927D9 /* ImagenesNombre */,
 				2111BAA41D57A0A2000D46FE /* utils */,
-				1E99E19D1D47726700E1D355 /* ImagenesJugador */,
 				1E5424BF1D3F8DC700C14619 /* Network */,
 				1E6D0E171D3E168E00A1F970 /* storyboards */,
 				1E6D0E161D3E168800A1F970 /* Controladores */,
@@ -258,6 +263,31 @@
 			name = storyboards;
 			sourceTree = "<group>";
 		};
+		1E82D3111D58912000B927D9 /* ImagenesNombre */ = {
+			isa = PBXGroup;
+			children = (
+				1E82D3121D58912C00B927D9 /* ImagenesEstadio */,
+				1E99E19D1D47726700E1D355 /* ImagenesJugador */,
+			);
+			name = ImagenesNombre;
+			sourceTree = "<group>";
+		};
+		1E82D3121D58912C00B927D9 /* ImagenesEstadio */ = {
+			isa = PBXGroup;
+			children = (
+				1E82D3131D58914400B927D9 /* FotosEstadio.swift */,
+			);
+			name = ImagenesEstadio;
+			sourceTree = "<group>";
+		};
+		1E82D3151D589A5000B927D9 /* Definition */ = {
+			isa = PBXGroup;
+			children = (
+				1E82D3161D589A5C00B927D9 /* Constants.swift */,
+			);
+			name = Definition;
+			sourceTree = "<group>";
+		};
 		1E99E1981D476D5E00E1D355 /* header */ = {
 			isa = PBXGroup;
 			children = (
@@ -270,6 +300,7 @@
 		1E99E19D1D47726700E1D355 /* ImagenesJugador */ = {
 			isa = PBXGroup;
 			children = (
+				2111BAA51D57A0B4000D46FE /* FotosNombre.swift */,
 				1E99E19E1D4772A000E1D355 /* CatxImagenJugador.swift */,
 			);
 			name = ImagenesJugador;
@@ -331,7 +362,6 @@
 		2111BAA41D57A0A2000D46FE /* utils */ = {
 			isa = PBXGroup;
 			children = (
-				2111BAA51D57A0B4000D46FE /* FotosNombre.swift */,
 				2111BAA71D57A706000D46FE /* UIImageView+Utils.swift */,
 			);
 			name = utils;
@@ -557,6 +587,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E82D3141D58914400B927D9 /* FotosEstadio.swift in Sources */,
+				1E82D3171D589A5C00B927D9 /* Constants.swift in Sources */,
 				1E5817671D351F55004C0FC0 /* ViewController.swift in Sources */,
 				1EDF170D1D3E228200A34935 /* CatxCalendario.swift in Sources */,
 				1E5817651D351F55004C0FC0 /* AppDelegate.swift in Sources */,

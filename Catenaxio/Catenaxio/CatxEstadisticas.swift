@@ -25,7 +25,7 @@ class CatxEstadisticas: UIViewController,UITableViewDelegate,UITableViewDataSour
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.setupUI();
         // Do any additional setup after loading the view.
     }
     
@@ -33,7 +33,7 @@ class CatxEstadisticas: UIViewController,UITableViewDelegate,UITableViewDataSour
         super.viewWillAppear(true);
         
         //barra de navegacion
-        self.setupUI();
+        
         
         listCalendario = [String : AnyObject]();
         listCalendarioData = [EstadisticasModel]();
