@@ -23,6 +23,7 @@
 		1E5C31471D489E4E00FAB93F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1E5C31461D489E4E00FAB93F /* GoogleService-Info.plist */; };
 		1E82D3141D58914400B927D9 /* FotosEstadio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E82D3131D58914400B927D9 /* FotosEstadio.swift */; };
 		1E82D3171D589A5C00B927D9 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E82D3161D589A5C00B927D9 /* Constants.swift */; };
+		1E82D31A1D58ADC700B927D9 /* FotosResultados.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E82D3191D58ADC700B927D9 /* FotosResultados.swift */; };
 		1E99E19A1D476D7100E1D355 /* CatxHeaderEstadisticas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E99E1991D476D7100E1D355 /* CatxHeaderEstadisticas.swift */; };
 		1E99E19C1D476D8100E1D355 /* CatxHeaderEstadisticas.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E99E19B1D476D8100E1D355 /* CatxHeaderEstadisticas.xib */; };
 		1E99E19F1D4772A000E1D355 /* CatxImagenJugador.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E99E19E1D4772A000E1D355 /* CatxImagenJugador.swift */; };
@@ -83,6 +84,7 @@
 		1E5C31461D489E4E00FAB93F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1E82D3131D58914400B927D9 /* FotosEstadio.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FotosEstadio.swift; sourceTree = "<group>"; };
 		1E82D3161D589A5C00B927D9 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		1E82D3191D58ADC700B927D9 /* FotosResultados.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FotosResultados.swift; sourceTree = "<group>"; };
 		1E99E1991D476D7100E1D355 /* CatxHeaderEstadisticas.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatxHeaderEstadisticas.swift; sourceTree = "<group>"; };
 		1E99E19B1D476D8100E1D355 /* CatxHeaderEstadisticas.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CatxHeaderEstadisticas.xib; sourceTree = "<group>"; };
 		1E99E19E1D4772A000E1D355 /* CatxImagenJugador.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatxImagenJugador.swift; sourceTree = "<group>"; };
@@ -266,6 +268,7 @@
 		1E82D3111D58912000B927D9 /* ImagenesNombre */ = {
 			isa = PBXGroup;
 			children = (
+				1E82D3181D58ADAE00B927D9 /* ImagenesResultados */,
 				1E82D3121D58912C00B927D9 /* ImagenesEstadio */,
 				1E99E19D1D47726700E1D355 /* ImagenesJugador */,
 			);
@@ -286,6 +289,14 @@
 				1E82D3161D589A5C00B927D9 /* Constants.swift */,
 			);
 			name = Definition;
+			sourceTree = "<group>";
+		};
+		1E82D3181D58ADAE00B927D9 /* ImagenesResultados */ = {
+			isa = PBXGroup;
+			children = (
+				1E82D3191D58ADC700B927D9 /* FotosResultados.swift */,
+			);
+			name = ImagenesResultados;
 			sourceTree = "<group>";
 		};
 		1E99E1981D476D5E00E1D355 /* header */ = {
@@ -596,6 +607,7 @@
 				1ED133461D4A000400E5877E /* CatxClasificacion.swift in Sources */,
 				1E57BBFE1D423DF400707E6D /* CatxEstadisticas.swift in Sources */,
 				1E99E19F1D4772A000E1D355 /* CatxImagenJugador.swift in Sources */,
+				1E82D31A1D58ADC700B927D9 /* FotosResultados.swift in Sources */,
 				1E99E19A1D476D7100E1D355 /* CatxHeaderEstadisticas.swift in Sources */,
 				1EB9C5141D3F7641009DC3C8 /* CalendarioModeloFirebase.swift in Sources */,
 				1EDF17121D3E234C00A34935 /* CatxCeldaCalendario.swift in Sources */,

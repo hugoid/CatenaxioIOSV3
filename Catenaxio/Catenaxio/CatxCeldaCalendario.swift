@@ -19,6 +19,7 @@ class CatxCeldaCalendario: UITableViewCell {
     
     @IBOutlet weak var resultadoLabel: UILabel!
     
+    @IBOutlet weak var imagenResultado: UIImageView!
     @IBOutlet weak var imagenEstadio: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()

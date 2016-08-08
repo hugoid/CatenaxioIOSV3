@@ -282,6 +282,9 @@ class CatxCalendario: UIViewController,UITableViewDelegate,UITableViewDataSource
         cell.rivalLabel.text = modeloCalendario.rival;
         cell.imagenEstadio.image = UIImage(named: "perales");
         cell.imagenEstadio.roundImage();
+        let colorResultado:FotosResultados = FotosResultados();
+        cell.imagenResultado.backgroundColor = colorResultado.getImageColorWithName(modeloCalendario.keyResultado);
+        cell.imagenResultado.roundImage();
         cell.backgroundColor = UIColor.clearColor();
         
         
