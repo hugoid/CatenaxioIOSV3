@@ -35,7 +35,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="WwV-Wk-0hj">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="WwV-Wk-0hj">
                                 <rect key="frame" x="0.0" y="64" width="600" height="487"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </tableView>
@@ -147,8 +147,8 @@
     </scenes>
     <resources>
         <image name="ejemplo" width="976" height="1540"/>
-        <image name="iconoCalendario" width="40" height="40"/>
-        <image name="iconoClasificacion" width="40" height="40"/>
-        <image name="iconoCopa" width="40" height="40"/>
+        <image name="iconoCalendario" width="32" height="32"/>
+        <image name="iconoClasificacion" width="32" height="32"/>
+        <image name="iconoCopa" width="32" height="32"/>
     </resources>
 </document>

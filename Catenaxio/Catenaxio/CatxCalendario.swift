@@ -75,7 +75,7 @@ class CatxCalendario: UIViewController,UITableViewDelegate,UITableViewDataSource
                 print(snapshot.value)
                 
                 
-                for numJornada:Int in 1...5 {
+                for numJornada:Int in 1...21 {
                     let itemsRef = snapshot.value?.valueForKey("Jornada" +  String(numJornada));
                     let calendarioModelFireBase:CalendarioModel = CalendarioModel();
                     print("Mi jornada 1 es \(snapshot.value?.valueForKey("Jornada" +  String(numJornada)))");
@@ -138,12 +138,15 @@ class CatxCalendario: UIViewController,UITableViewDelegate,UITableViewDataSource
         
         
         self.tableView.registerNib(UINib(nibName: "CatxCeldaCalendario", bundle: nil), forCellReuseIdentifier: CatxCeldaCalendario.cellId);
-      
+        self.tableView.contentInset = UIEdgeInsets(top: 10, left: 0, bottom: 0, right: 0);
         //self.tableView.registerNib(UINib(nibName: "HeaderCeldaPanelAdministrador", bundle: nil), forHeaderFooterViewReuseIdentifier: HeaderCeldaPanelAdministrador.cellId);
         self.tableView.delegate = self;
         self.tableView.dataSource = self;
+        
         //self.tableView.rowHeight = UITableViewAutomaticDimension;
     }
+    
+    
     
     // MARK: - Cargar Modelo
     func loadData () -> Void {
@@ -315,7 +318,7 @@ class CatxCalendario: UIViewController,UITableViewDelegate,UITableViewDataSource
     } */
     
     func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 40;
+        return 0;
     }
     
     

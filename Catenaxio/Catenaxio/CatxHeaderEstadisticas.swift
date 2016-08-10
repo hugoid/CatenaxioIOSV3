@@ -10,6 +10,7 @@ import UIKit
 
 class CatxHeaderEstadisticas: UITableViewCell {
 
+    @IBOutlet weak var labelPartidosTotales: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

@@ -14,7 +14,7 @@ class CatxEstadisticas: UIViewController,UITableViewDelegate,UITableViewDataSour
     
     var ref : FIRDatabaseReference?
     
-    
+    var partidosJugados:String = "0";
     
     
     
@@ -72,7 +72,8 @@ class CatxEstadisticas: UIViewController,UITableViewDelegate,UITableViewDataSour
                 refUnwrapped.observeEventType(.Value, withBlock: { snapshot in
                     print(snapshot.value)
                     
-                    
+                    let valorPartidosTotales:AnyObject = (snapshot.value?.valueForKey("PJ"))!;
+                    self.partidosJugados = valorPartidosTotales as! String;
                     let listaJugadores:[AnyObject] = snapshot.value?.valueForKey("Jugadores") as! [AnyObject];
                     
                     for jugador:AnyObject in listaJugadores {
@@ -150,6 +151,7 @@ class CatxEstadisticas: UIViewController,UITableViewDelegate,UITableViewDataSour
     func setup () -> Void {
         self.tableView.registerNib(UINib(nibName: "CatxCeldaEstadisticas", bundle: nil), forCellReuseIdentifier: CatxCeldaEstadisticas.cellId);
         self.tableView.registerNib(UINib(nibName: "CatxHeaderEstadisticas", bundle: nil), forCellReuseIdentifier: CatxHeaderEstadisticas.cellId);
+        self.tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0);
         
         //self.tableView.registerNib(UINib(nibName: "HeaderCeldaPanelAdministrador", bundle: nil), forHeaderFooterViewReuseIdentifier: HeaderCeldaPanelAdministrador.cellId);
         self.tableView.delegate = self;
@@ -337,7 +339,7 @@ class CatxEstadisticas: UIViewController,UITableViewDelegate,UITableViewDataSour
      let header = (tableView.dequeueReusableCellWithIdentifier(CatxHeaderEstadisticas.cellId)) as! CatxHeaderEstadisticas;
      
         header.contentView.backgroundColor = UIColor(red: 68/255, green: 146/255, blue: 132/255, alpha: 1);
-     
+        header.labelPartidosTotales.text = self.partidosJugados;
      
      return header.contentView;
      
