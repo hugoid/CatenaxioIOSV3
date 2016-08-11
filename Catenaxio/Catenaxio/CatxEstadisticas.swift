@@ -73,7 +73,7 @@ class CatxEstadisticas: UIViewController,UITableViewDelegate,UITableViewDataSour
                     print(snapshot.value)
                     
                     let valorPartidosTotales:AnyObject = (snapshot.value?.valueForKey("PJ"))!;
-                    self.partidosJugados = valorPartidosTotales as! String;
+                    self.partidosJugados = String(valorPartidosTotales);
                     let listaJugadores:[AnyObject] = snapshot.value?.valueForKey("Jugadores") as! [AnyObject];
                     
                     for jugador:AnyObject in listaJugadores {
