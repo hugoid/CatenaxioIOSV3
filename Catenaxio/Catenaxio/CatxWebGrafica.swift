@@ -48,15 +48,10 @@ class CatxWebGrafica: UIViewController, UIWebViewDelegate {
     }
     
     func webViewDidFinishLoad(webView: UIWebView) {
-        let valor:Int = 5;
-        let titulo:String = "xx";
         
-        for jugador:EstadisticasModel in self.listaEstadisticas{
-            print("Mi jugador es \(jugador.nombre)");
-        }
         
-        let peticionEjemploString:NSString = NSString(format: "drawChart(%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,'%@')",valor,valor,valor,valor,valor,valor,valor,valor,valor,valor,titulo);
-        self.web.stringByEvaluatingJavaScriptFromString(peticionEjemploString as String);
+        let catxString:CatxStringDataToHTML = CatxStringDataToHTML();
+        self.web.stringByEvaluatingJavaScriptFromString(catxString.getStringToHTML(self.listaEstadisticas, tipoPuntuacion: "asistencias") as String);
        
     }
 

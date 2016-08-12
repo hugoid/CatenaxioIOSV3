@@ -295,27 +295,7 @@ class CatxCalendario: UIViewController,UITableViewDelegate,UITableViewDataSource
         
     }
     
-    /*func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        
-        //let header = (tableView.dequeueReusableHeaderFooterViewWithIdentifier(HeaderCeldaPanelAdministrador.cellId)) as! HeaderCeldaPanelAdministrador;
-        let header = (tableView.dequeueReusableCellWithIdentifier(HeaderCeldaPanelAdministrador.cellId)) as! HeaderCeldaPanelAdministrador;
-        
-        
-        
-        if let fetchUnwrapped = fetchedResultsController {
-            if let sectionUnwrapped = fetchUnwrapped.sections {
-                let currentSection:NSFetchedResultsSectionInfo = sectionUnwrapped[section];
-                header.nombreSection.text = currentSection.name;
-                
-            }
-        }
-        
-        
-        
-        return header.contentView;
-        
-        
-    } */
+   
     
     func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 0;

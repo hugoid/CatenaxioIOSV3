@@ -21,6 +21,7 @@
 		1E58177A1D351F55004C0FC0 /* CatenaxioTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5817791D351F55004C0FC0 /* CatenaxioTests.swift */; };
 		1E5817851D351F55004C0FC0 /* CatenaxioUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5817841D351F55004C0FC0 /* CatenaxioUITests.swift */; };
 		1E5C31471D489E4E00FAB93F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1E5C31461D489E4E00FAB93F /* GoogleService-Info.plist */; };
+		1E66B82B1D5DBF2B000E8AD5 /* CatxStringDataToHTML.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E66B82A1D5DBF2B000E8AD5 /* CatxStringDataToHTML.swift */; };
 		1E82D3141D58914400B927D9 /* FotosEstadio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E82D3131D58914400B927D9 /* FotosEstadio.swift */; };
 		1E82D3171D589A5C00B927D9 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E82D3161D589A5C00B927D9 /* Constants.swift */; };
 		1E82D31A1D58ADC700B927D9 /* FotosResultados.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E82D3191D58ADC700B927D9 /* FotosResultados.swift */; };
@@ -82,6 +83,7 @@
 		1E5817841D351F55004C0FC0 /* CatenaxioUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatenaxioUITests.swift; sourceTree = "<group>"; };
 		1E5817861D351F55004C0FC0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1E5C31461D489E4E00FAB93F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		1E66B82A1D5DBF2B000E8AD5 /* CatxStringDataToHTML.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatxStringDataToHTML.swift; sourceTree = "<group>"; };
 		1E82D3131D58914400B927D9 /* FotosEstadio.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FotosEstadio.swift; sourceTree = "<group>"; };
 		1E82D3161D589A5C00B927D9 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		1E82D3191D58ADC700B927D9 /* FotosResultados.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FotosResultados.swift; sourceTree = "<group>"; };
@@ -245,6 +247,14 @@
 			path = CatenaxioUITests;
 			sourceTree = "<group>";
 		};
+		1E66B8291D5DBF01000E8AD5 /* Datos */ = {
+			isa = PBXGroup;
+			children = (
+				1E66B82A1D5DBF2B000E8AD5 /* CatxStringDataToHTML.swift */,
+			);
+			name = Datos;
+			sourceTree = "<group>";
+		};
 		1E6D0E161D3E168800A1F970 /* Controladores */ = {
 			isa = PBXGroup;
 			children = (
@@ -381,6 +391,7 @@
 		21C340431D4E098B007B85D7 /* WebGraphic */ = {
 			isa = PBXGroup;
 			children = (
+				1E66B8291D5DBF01000E8AD5 /* Datos */,
 				21C340481D4E0D9B007B85D7 /* html */,
 				21C340441D4E09C3007B85D7 /* CatxWebGrafica.swift */,
 				21C340451D4E09C3007B85D7 /* CatxWebGrafica.xib */,
@@ -606,6 +617,7 @@
 				1EDF17181D3E2BCD00A34935 /* CalendarioModel.swift in Sources */,
 				1ED133461D4A000400E5877E /* CatxClasificacion.swift in Sources */,
 				1E57BBFE1D423DF400707E6D /* CatxEstadisticas.swift in Sources */,
+				1E66B82B1D5DBF2B000E8AD5 /* CatxStringDataToHTML.swift in Sources */,
 				1E99E19F1D4772A000E1D355 /* CatxImagenJugador.swift in Sources */,
 				1E82D31A1D58ADC700B927D9 /* FotosResultados.swift in Sources */,
 				1E99E19A1D476D7100E1D355 /* CatxHeaderEstadisticas.swift in Sources */,
