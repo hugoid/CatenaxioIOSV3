@@ -31,7 +31,7 @@ class CatxEstadisticas: UIViewController,UITableViewDelegate,UITableViewDataSour
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(true);
-        
+
         //barra de navegacion
         
         
@@ -59,9 +59,9 @@ class CatxEstadisticas: UIViewController,UITableViewDelegate,UITableViewDataSour
         
     }
     
-    
-    
-    func downloadFireBaseData () -> Void {
+    func startDownload () -> Void {
+        
+        
         self.ref = FIRDatabase.database().reference()
         
         if let refUnwrapped1 = self.ref {
@@ -91,7 +91,7 @@ class CatxEstadisticas: UIViewController,UITableViewDelegate,UITableViewDataSour
                         
                     }
                     
-                   
+                    
                     
                     print("termino");
                     
@@ -112,16 +112,19 @@ class CatxEstadisticas: UIViewController,UITableViewDelegate,UITableViewDataSour
             }
         }
         
+    }
+    
+    func downloadFireBaseData () -> Void {
         
         
+        self.startDownload();
         
-        
-        
+
     }
     
     // MARK: - Setup Color UI
     func setupUI () -> Void {
-        self.tabBarController?.navigationItem.title = "My Title"
+        self.tabBarController?.navigationItem.title = "Catenaxio"
         let buttonSinc:UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Refresh, target: self, action: #selector(CatxEstadisticas.pushSynData));
         let buttonShowGraph:UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Search, target: self, action: #selector(CatxEstadisticas.pushShowGraph));
         self.tabBarController?.navigationItem.rightBarButtonItems = [buttonShowGraph,buttonSinc];
@@ -156,13 +159,14 @@ class CatxEstadisticas: UIViewController,UITableViewDelegate,UITableViewDataSour
         //self.tableView.registerNib(UINib(nibName: "HeaderCeldaPanelAdministrador", bundle: nil), forHeaderFooterViewReuseIdentifier: HeaderCeldaPanelAdministrador.cellId);
         self.tableView.delegate = self;
         self.tableView.dataSource = self;
+        self.tableView.allowsSelection = false;
         //self.tableView.rowHeight = UITableViewAutomaticDimension;
     }
     
     // MARK: - Push Button
     
     func pushSynData () -> Void{
-        print("push sync");
+        self.startDownload();
     }
     
     func pushShowGraph () -> Void {

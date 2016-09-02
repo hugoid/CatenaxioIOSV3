@@ -5,10 +5,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--Navigation Controller-->
+        <!--Nav-->
         <scene sceneID="klY-kc-rcX">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="u9N-t5-qS8" sceneMemberID="viewController">
+                <navigationController title="Nav" automaticallyAdjustsScrollViewInsets="NO" id="u9N-t5-qS8" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="qen-Ov-t9X">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -93,7 +93,7 @@
         <!--Calendario-->
         <scene sceneID="xzW-dB-BzN">
             <objects>
-                <viewController id="YUs-l9-a2k" customClass="CatxCalendario" customModule="Catenaxio" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Calendario" id="YUs-l9-a2k" customClass="CatxCalendario" customModule="Catenaxio" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="vwC-PR-3DO"/>
                         <viewControllerLayoutGuide type="bottom" id="oSm-tv-kyp"/>
@@ -124,10 +124,10 @@
             </objects>
             <point key="canvasLocation" x="1159" y="425"/>
         </scene>
-        <!--Catx Tab Bar Controller-->
+        <!--Tab-->
         <scene sceneID="AdQ-0P-3vS">
             <objects>
-                <tabBarController id="v2U-MW-d1F" customClass="CatxTabBarController" customModule="Catenaxio" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController title="Tab" id="v2U-MW-d1F" customClass="CatxTabBarController" customModule="Catenaxio" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="6ec-yT-BuZ"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="Puo-Bv-eaq">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>

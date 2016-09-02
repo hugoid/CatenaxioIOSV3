@@ -22,6 +22,7 @@ class CatxClasificacion: UIViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(true);
         
+        
         //barra de navegacion
         
         
@@ -100,6 +101,8 @@ class CatxClasificacion: UIViewController {
         
     }
     
+    
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -109,10 +112,9 @@ class CatxClasificacion: UIViewController {
     
     // MARK: - Setup Color UI
     func setupUI () -> Void {
-        self.tabBarController?.navigationItem.title = "My Title"
+        self.tabBarController?.navigationItem.title = "Catenaxio"
         let buttonSinc:UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Refresh, target: self, action: #selector(CatxEstadisticas.pushSynData));
-        let buttonShowGraph:UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Search, target: self, action: #selector(CatxEstadisticas.pushShowGraph));
-        self.tabBarController?.navigationItem.rightBarButtonItems = [buttonShowGraph,buttonSinc];
+        self.tabBarController?.navigationItem.rightBarButtonItems = [buttonSinc];
         //self.tabBarController?.tabBar.translucent = false;
         //self.tabBarController?.tabBar.tintColor = UIColor(red: 48/255, green: 67/255, blue: 74/255, alpha: 1);
         //self.tabBarController?.tabBar.barTintColor = UIColor.whiteColor(); //fondo barra abajo

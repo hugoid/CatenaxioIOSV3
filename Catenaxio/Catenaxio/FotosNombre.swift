@@ -13,42 +13,42 @@ class FotosNombre: NSObject {
     
     func getImageWithName(nombre:String) -> UIImage {
         
-        if nombre == "abel" {
+        if nombre == "Abel" {
             return UIImage(named: "abel")!;
         }
-        else if nombre == "abelD" {
+        else if nombre == "AbelD" {
             return UIImage(named: "abelD")!;
         
         }
-        else if nombre == "juanito" {
+        else if nombre == "Juanito" {
             return UIImage(named: "juanito")!;
             
         }
-        else if nombre == "fer" {
+        else if nombre == "Fer" {
             return UIImage(named: "fer")!;
             
         }
-        else if nombre == "jordan" {
+        else if nombre == "Jordan" {
             return UIImage(named: "jordan")!;
             
         }
-        else if nombre == "hector" {
+        else if nombre == "Hector" {
             return UIImage(named: "hector")!;
             
         }
-        else if nombre == "juanma" {
+        else if nombre == "Juanma" {
             return UIImage(named: "juanma")!;
             
         }
-        else if nombre == "hugo" {
+        else if nombre == "Hugo" {
             return UIImage(named: "hugo3")!;
             
         }
-        else if nombre == "meri" {
+        else if nombre == "Meri" {
             return UIImage(named: "meri")!;
             
         }
-        else if nombre == "anton" {
+        else if nombre == "Anton" {
             return UIImage(named: "anton")!;
             
         }

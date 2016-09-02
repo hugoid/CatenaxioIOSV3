@@ -25,7 +25,7 @@ class CatxCalendario: UIViewController,UITableViewDelegate,UITableViewDataSource
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Calendario";
+        
         self.setup();
         // Do any additional setup after loading the view.
     }
@@ -33,7 +33,14 @@ class CatxCalendario: UIViewController,UITableViewDelegate,UITableViewDataSource
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(true);
         
+        self.startDownload();
         
+        
+        
+        
+    }
+    
+    func startDownload () -> Void {
         
         listCalendario = [String : AnyObject]();
         listCalendarioData = [CalendarioModel]();
@@ -60,7 +67,6 @@ class CatxCalendario: UIViewController,UITableViewDelegate,UITableViewDataSource
         {
             // Iphone
         }
-        
         
     }
     
@@ -111,10 +117,9 @@ class CatxCalendario: UIViewController,UITableViewDelegate,UITableViewDataSource
     
     func setup () -> Void {
         
-        self.tabBarController?.navigationItem.title = "My Title"
-        let buttonSinc:UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Refresh, target: self, action: #selector(CatxEstadisticas.pushSynData));
-        let buttonShowGraph:UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Search, target: self, action: #selector(CatxEstadisticas.pushShowGraph));
-        self.tabBarController?.navigationItem.rightBarButtonItems = [buttonShowGraph,buttonSinc];
+        self.tabBarController?.navigationItem.title = "Catenaxio"
+        let buttonSinc:UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Refresh, target: self, action: #selector(CatxCalendario.pushSynData));
+        self.tabBarController?.navigationItem.rightBarButtonItems = [buttonSinc];
         //self.tabBarController?.tabBar.translucent = false;
         //self.tabBarController?.tabBar.tintColor = UIColor(red: 48/255, green: 67/255, blue: 74/255, alpha: 1);
         //self.tabBarController?.tabBar.barTintColor = UIColor.whiteColor(); //fondo barra abajo
@@ -142,7 +147,7 @@ class CatxCalendario: UIViewController,UITableViewDelegate,UITableViewDataSource
         //self.tableView.registerNib(UINib(nibName: "HeaderCeldaPanelAdministrador", bundle: nil), forHeaderFooterViewReuseIdentifier: HeaderCeldaPanelAdministrador.cellId);
         self.tableView.delegate = self;
         self.tableView.dataSource = self;
-        
+        self.tableView.allowsSelection = false;
         //self.tableView.rowHeight = UITableViewAutomaticDimension;
     }
     
@@ -233,15 +238,9 @@ class CatxCalendario: UIViewController,UITableViewDelegate,UITableViewDataSource
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func pushSynData () -> Void {
+        self.startDownload();
     }
-    */
     
     
     
@@ -307,7 +306,7 @@ class CatxCalendario: UIViewController,UITableViewDelegate,UITableViewDataSource
         
         //self.tableView.reloadSections(NSIndexSet(index: indexPath.section), withRowAnimation: UITableViewRowAnimation.Fade)
         
-        print("Pinto celda");
+        self.tableView.deselectRowAtIndexPath(indexPath, animated: false);
         
         
         
