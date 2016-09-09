@@ -38,51 +38,51 @@ class CatxStringDataToHTML: NSObject {
                 puntuacion = Int(jugador.asistencias)!;
             }
             
-            if jugador.nombre == "abel" {
+            if jugador.nombre == "Abel" {
                 puntosAbelG = puntuacion;
             }
-            else if jugador.nombre == "abelD" {
+            else if jugador.nombre == "AbelD" {
                 puntosAbelD = puntuacion;
             }
-            else if jugador.nombre == "anton" {
+            else if jugador.nombre == "Anton" {
                 puntosAnton = puntuacion;
             }
-            else if jugador.nombre == "hector" {
+            else if jugador.nombre == "Hector" {
                 puntosCano = puntuacion;
             }
-            else if jugador.nombre == "hugo" {
+            else if jugador.nombre == "Hugo" {
                 puntosHugo = puntuacion;
             }
-            else if jugador.nombre == "jordan" {
+            else if jugador.nombre == "Jordan" {
                 puntosJordan = puntuacion;
             }
-            else if jugador.nombre == "juanito" {
+            else if jugador.nombre == "Juanito" {
                 puntosJuanito = puntuacion;
             }
-            else if jugador.nombre == "juanma" {
+            else if jugador.nombre == "Juanma" {
                 puntosJuanma = puntuacion;
             }
-            else if jugador.nombre == "meri" {
+            else if jugador.nombre == "Meri" {
                 puntosMeri = puntuacion;
             }
-            else if jugador.nombre == "fer" {
+            else if jugador.nombre == "Fer" {
                 puntosFer = puntuacion;
             }
-            else if jugador.nombre == "invitado" {
+            else if jugador.nombre == "Invitado" {
                 puntosInvitado = puntuacion;
             }
             
         }
         
-        var tipoPuntuacion:String = "";
+        var tipoPuntuacionString:String = "";
         if tipoPuntuacion == "goles" {
-            tipoPuntuacion = "Goles";
+            tipoPuntuacionString = "Goles";
         }
         else{
-            tipoPuntuacion = "Asistencias"
+            tipoPuntuacionString = "Asistencias"
         }
        
-        let stringToTHML:NSString = NSString(format: "drawChart(%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,'%@')",puntosAbelG,puntosAbelD,puntosJordan,puntosAnton,puntosCano,puntosMeri,puntosHugo,puntosJuanma,puntosJuanito,puntosFer,puntosInvitado,tipoPuntuacion);
+        let stringToTHML:NSString = NSString(format: "drawChart(%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,%d,'%@')",puntosAbelG,puntosAbelD,puntosJordan,puntosAnton,puntosCano,puntosMeri,puntosHugo,puntosJuanma,puntosJuanito,puntosFer,puntosInvitado,tipoPuntuacionString);
         return stringToTHML;
         
         

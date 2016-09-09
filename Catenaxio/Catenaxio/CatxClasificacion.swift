@@ -26,11 +26,26 @@ class CatxClasificacion: UIViewController {
         //barra de navegacion
         
         
+        self.startDownload();
         
+        
+        
+    }
+    
+    
+    
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    //download
+    func startDownload () -> Void {
         // Points to the root reference
         let storageRef = FIRStorage.storage().referenceForURL("gs://catenaxio-dd230.appspot.com");
         // Create a reference from a Google Cloud Storage URI
-       
+        
         // Points to "images"
         let imagesRef = storageRef.child("clasificacion/clasificacion.png")
         
@@ -44,7 +59,7 @@ class CatxClasificacion: UIViewController {
         let localURL: NSURL! = NSURL(string: "file:///local/images/island.jpg")
         let downloadTask = imagesRef.writeToFile(localURL)
         
-            // Download in memory with a maximum allowed size of 1MB (1 * 1024 * 1024 bytes)
+        // Download in memory with a maximum allowed size of 1MB (1 * 1024 * 1024 bytes)
         imagesRef.dataWithMaxSize(5 * 1024 * 1024) { (data, error) -> Void in
             if (error != nil) {
                 // Uh-oh, an error occurred!
@@ -66,7 +81,7 @@ class CatxClasificacion: UIViewController {
         
         downloadTask.observeStatus(.Success) { (snapshot) -> Void in
             // Download completed successfully
-             print("descargado suscessfuly imagen \(snapshot)");
+            print("descargado suscessfuly imagen \(snapshot)");
         }
         
         // Errors only occur in the "Failure" case
@@ -97,23 +112,13 @@ class CatxClasificacion: UIViewController {
             }
             
         }
-        
-        
-    }
-    
-    
-    
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     
     // MARK: - Setup Color UI
     func setupUI () -> Void {
         self.tabBarController?.navigationItem.title = "Catenaxio"
-        let buttonSinc:UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Refresh, target: self, action: #selector(CatxEstadisticas.pushSynData));
+        let buttonSinc:UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Refresh, target: self, action: #selector(CatxClasificacion.pushSynData));
         self.tabBarController?.navigationItem.rightBarButtonItems = [buttonSinc];
         //self.tabBarController?.tabBar.translucent = false;
         //self.tabBarController?.tabBar.tintColor = UIColor(red: 48/255, green: 67/255, blue: 74/255, alpha: 1);
@@ -135,6 +140,10 @@ class CatxClasificacion: UIViewController {
         
         gradient.colors = arrayColors
         self.view.layer.insertSublayer(gradient, atIndex: 0)
+    }
+    
+    func pushSynData () -> Void {
+        self.startDownload();
     }
     
 

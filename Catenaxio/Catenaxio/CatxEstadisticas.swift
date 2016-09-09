@@ -10,7 +10,7 @@ import UIKit
 import Firebase
 import FirebaseDatabase
 
-class CatxEstadisticas: UIViewController,UITableViewDelegate,UITableViewDataSource {
+class CatxEstadisticas: UIViewController,UITableViewDelegate,UITableViewDataSource,UIActionSheetDelegate {
     
     var ref : FIRDatabaseReference?
     
@@ -25,7 +25,7 @@ class CatxEstadisticas: UIViewController,UITableViewDelegate,UITableViewDataSour
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.setupUI();
+        
         // Do any additional setup after loading the view.
     }
     
@@ -33,7 +33,7 @@ class CatxEstadisticas: UIViewController,UITableViewDelegate,UITableViewDataSour
         super.viewWillAppear(true);
 
         //barra de navegacion
-        
+        self.setupUI();
         
         listCalendario = [String : AnyObject]();
         listCalendarioData = [EstadisticasModel]();
@@ -171,10 +171,37 @@ class CatxEstadisticas: UIViewController,UITableViewDelegate,UITableViewDataSour
     
     func pushShowGraph () -> Void {
         print("push grahp");
-        let graficas:CatxWebGrafica = CatxWebGrafica(arrayEstadisticas: self.listCalendarioData)!;
-        self.navigationController?.pushViewController(graficas, animated: true);
+        
+        
+        let actionSheet = UIActionSheet(title: "Opciones", delegate: self, cancelButtonTitle: "Cancelar", destructiveButtonTitle: nil, otherButtonTitles: "Goles", "Asistencias")
+        
+        actionSheet.showInView(self.view)
         
     }
+    
+    //MARK: Delegate Action Sheet
+    func actionSheet(actionSheet: UIActionSheet, clickedButtonAtIndex buttonIndex: Int)
+    {
+        print("\(buttonIndex)")
+        switch (buttonIndex){
+            
+        case 0:
+            print("Cancelar")
+        case 1:
+            print("Goles")
+             let graficas:CatxWebGrafica = CatxWebGrafica(arrayEstadisticas: self.listCalendarioData,tipoDato: "goles")!;
+             self.navigationController?.pushViewController(graficas, animated: true);
+        case 2:
+            print("Asistencia")
+             let graficas:CatxWebGrafica = CatxWebGrafica(arrayEstadisticas: self.listCalendarioData,tipoDato: "asistencias")!;
+             self.navigationController?.pushViewController(graficas, animated: true);
+        default:
+            print("Default")
+            //Some code here..
+            
+        }
+    }
+    
     
     // MARK: - Cargar Modelo
     func loadData () -> Void {
@@ -210,7 +237,7 @@ class CatxEstadisticas: UIViewController,UITableViewDelegate,UITableViewDataSour
             }
             
         }
-        else{
+        /*else{
             if let path = NSBundle.mainBundle().pathForResource("Estadisticas", ofType: "plist") {
                 self.listCalendario = NSDictionary(contentsOfFile:path) as! [String : AnyObject];
                 
@@ -231,7 +258,7 @@ class CatxEstadisticas: UIViewController,UITableViewDelegate,UITableViewDataSour
                 
                 print("mi valor estadistica es \(listCalendarioUnwrapped)");
                 
-                /*for numJornada:Int in 1...self.listCalendario.count {
+                for numJornada:Int in 1...self.listCalendario.count {
                     
                     
                     if let valorJornadaUnwrapped:AnyObject = listCalendarioUnwrapped["Jornada" + String(numJornada)] {
@@ -255,12 +282,12 @@ class CatxEstadisticas: UIViewController,UITableViewDelegate,UITableViewDataSour
                     }
                     
                     
-                }*/
+                }
             }
             
             
             
-        }
+        }*/
         //calendarioModel.resultado = listCalendarioDataFirebase[numJornada - 1].resultado;
         print("termino");
         self.tableView.reloadData();
@@ -361,7 +388,7 @@ class CatxEstadisticas: UIViewController,UITableViewDelegate,UITableViewDataSour
         
         //self.tableView.reloadSections(NSIndexSet(index: indexPath.section), withRowAnimation: UITableViewRowAnimation.Fade)
         
-        print("Pinto celda");
+        
         
         
         

@@ -12,10 +12,11 @@ class CatxWebGrafica: UIViewController, UIWebViewDelegate {
 
     @IBOutlet weak var web: UIWebView!
     var listaEstadisticas:[EstadisticasModel] = [EstadisticasModel]();
-    
-    init? (arrayEstadisticas:[EstadisticasModel]) {
+    var tipoDato:String = "goles";
+    init? (arrayEstadisticas:[EstadisticasModel],tipoDato:String) {
         super.init(nibName: "CatxWebGrafica", bundle: nil);
         self.listaEstadisticas = arrayEstadisticas;
+        self.tipoDato = tipoDato;
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -51,7 +52,7 @@ class CatxWebGrafica: UIViewController, UIWebViewDelegate {
         
         
         let catxString:CatxStringDataToHTML = CatxStringDataToHTML();
-        self.web.stringByEvaluatingJavaScriptFromString(catxString.getStringToHTML(self.listaEstadisticas, tipoPuntuacion: "asistencias") as String);
+        self.web.stringByEvaluatingJavaScriptFromString(catxString.getStringToHTML(self.listaEstadisticas, tipoPuntuacion: self.tipoDato) as String);
        
     }
 
