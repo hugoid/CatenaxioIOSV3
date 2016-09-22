@@ -148,7 +148,8 @@ class CatxCalendario: UIViewController,UITableViewDelegate,UITableViewDataSource
         self.tableView.delegate = self;
         self.tableView.dataSource = self;
         self.tableView.allowsSelection = false;
-        //self.tableView.rowHeight = UITableViewAutomaticDimension;
+        self.tableView.rowHeight = UITableViewAutomaticDimension;
+        self.tableView.estimatedRowHeight = 160
     }
     
     
@@ -288,6 +289,7 @@ class CatxCalendario: UIViewController,UITableViewDelegate,UITableViewDataSource
         cell.imagenResultado.backgroundColor = colorResultado.getImageColorWithName(modeloCalendario.keyResultado);
         cell.imagenResultado.roundImage();
         cell.backgroundColor = UIColor.clearColor();
+        cell.estadioLabel.text = modeloCalendario.lugar;
         
         
         return cell
@@ -315,6 +317,7 @@ class CatxCalendario: UIViewController,UITableViewDelegate,UITableViewDataSource
     }
     
     
+  
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return 160;
     }
