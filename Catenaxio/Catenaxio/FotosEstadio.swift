@@ -12,28 +12,32 @@ import UIKit
 class FotosEstadio: NSObject {
     
     func getImageWithName(nombre:String) -> UIImage {
-        
-        if nombre == "cierva" {
+        print("mi estadio es \(nombre)")
+        if nombre == "Juan de la Cierva" {
             return UIImage(named: "cierva")!;
         }
-        else if nombre == "perales" {
+        else if nombre == "Perales" {
             return UIImage(named: "perales")!;
             
         }
-        else if nombre == "sectorIII" {
+        else if nombre == "Sector III" {
             return UIImage(named: "sectorIII")!;
             
         }
-        else if nombre == "m4" {
+        else if nombre == "M-4" {
             return UIImage(named: "m4")!;
             
         }
        
-        else if nombre == "bercial" {
+        else if nombre == "El Bercial" {
             return UIImage(named: "bercial")!;
             
         }
-        else if nombre == "giner" {
+        else if nombre == "Giner 1" {
+            return UIImage(named: "giner")!;
+            
+        }
+        else if nombre == "Giner 2" {
             return UIImage(named: "giner")!;
             
         }

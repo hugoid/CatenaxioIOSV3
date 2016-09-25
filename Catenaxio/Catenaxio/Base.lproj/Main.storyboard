@@ -69,21 +69,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ejemplo" translatesAutoresizingMaskIntoConstraints="NO" id="6fv-wu-S7I">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6fv-wu-S7I">
                                 <rect key="frame" x="0.0" y="64" width="600" height="487"/>
                             </imageView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="h7y-vZ-EbT">
+                                <rect key="frame" x="282" y="282" width="37" height="37"/>
+                                <color key="color" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.32668200339999998" blue="0.89066063809999996" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="h7y-vZ-EbT" firstAttribute="centerX" secondItem="ozD-er-cIr" secondAttribute="centerX" id="3b0-Eu-QN0"/>
                             <constraint firstItem="6fv-wu-S7I" firstAttribute="leading" secondItem="ozD-er-cIr" secondAttribute="leading" id="7Xj-e3-7WZ"/>
                             <constraint firstAttribute="trailing" secondItem="6fv-wu-S7I" secondAttribute="trailing" id="OP9-mQ-qqg"/>
                             <constraint firstItem="cGr-em-jL3" firstAttribute="top" secondItem="6fv-wu-S7I" secondAttribute="bottom" id="YYI-vB-hus"/>
                             <constraint firstItem="6fv-wu-S7I" firstAttribute="top" secondItem="QoJ-5b-4ET" secondAttribute="bottom" id="dHr-QZ-UA8"/>
+                            <constraint firstItem="h7y-vZ-EbT" firstAttribute="centerY" secondItem="ozD-er-cIr" secondAttribute="centerY" id="fX2-as-NQU"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Clasificacion" image="iconoCopa" id="tZe-mK-3Nl"/>
                     <connections>
                         <outlet property="imageClasificacion" destination="6fv-wu-S7I" id="J60-3E-MNh"/>
+                        <outlet property="indicatorWaiting" destination="h7y-vZ-EbT" id="Uh8-d6-ePU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nMU-7y-QdE" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -146,7 +153,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="ejemplo" width="976" height="1540"/>
         <image name="iconoCalendario" width="32" height="32"/>
         <image name="iconoClasificacion" width="32" height="32"/>
         <image name="iconoCopa" width="32" height="32"/>

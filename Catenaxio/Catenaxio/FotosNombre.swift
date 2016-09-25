@@ -16,7 +16,7 @@ class FotosNombre: NSObject {
         if nombre == "Abel" {
             return UIImage(named: "abel")!;
         }
-        else if nombre == "AbelD" {
+        else if nombre == "Dorado" {
             return UIImage(named: "abelD")!;
         
         }

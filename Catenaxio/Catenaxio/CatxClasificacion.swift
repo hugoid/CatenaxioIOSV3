@@ -12,6 +12,7 @@ import FirebaseStorage
 
 class CatxClasificacion: UIViewController {
 
+    @IBOutlet weak var indicatorWaiting: UIActivityIndicatorView!
     @IBOutlet weak var imageClasificacion: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,7 +26,7 @@ class CatxClasificacion: UIViewController {
         
         //barra de navegacion
         
-        
+
         self.startDownload();
         
         
@@ -42,6 +43,9 @@ class CatxClasificacion: UIViewController {
     
     //download
     func startDownload () -> Void {
+        
+        self.indicatorWaiting.startAnimating()
+        self.indicatorWaiting.hidden = false
         // Points to the root reference
         let storageRef = FIRStorage.storage().referenceForURL("gs://catenaxio-dd230.appspot.com");
         // Create a reference from a Google Cloud Storage URI
@@ -64,12 +68,18 @@ class CatxClasificacion: UIViewController {
             if (error != nil) {
                 // Uh-oh, an error occurred!
                 print("error");
+                
+                self.indicatorWaiting.stopAnimating()
+                self.indicatorWaiting.hidden = true;
             } else {
                 // Data for "images/island.jpg" is returned
                 // ... let islandImage: UIImage! = UIImage(data: data!)
                 print("tengo mi imagen");
                 let imagenClasificacion : UIImage! = UIImage(data: data!);
                 self.imageClasificacion.image = imagenClasificacion;
+                
+                self.indicatorWaiting.stopAnimating()
+                self.indicatorWaiting.hidden = true;
             }
         }
         
@@ -77,11 +87,13 @@ class CatxClasificacion: UIViewController {
         downloadTask.observeStatus(.Resume) { (snapshot) -> Void in
             // Download resumed, also fires when the download starts
             print("descargado correctamente imagen");
+            
         }
         
         downloadTask.observeStatus(.Success) { (snapshot) -> Void in
             // Download completed successfully
             print("descargado suscessfuly imagen \(snapshot)");
+            
         }
         
         // Errors only occur in the "Failure" case
@@ -93,22 +105,27 @@ class CatxClasificacion: UIViewController {
                 // File doesn't exist
                 print("nof found");
                 
+                
             case .Unauthorized:
                 // User doesn't have permission to access file
                 print("not unatorized");
+             
                 
             case .Cancelled:
                 // User canceled the upload
                 print("cancelled");
+                
                 
                 //...
                 
             case .Unknown:
                 // Unknown error occurred, inspect the server response
                 print("unknow");
+               
                 
             default:
                 print("default");
+                
             }
             
         }
