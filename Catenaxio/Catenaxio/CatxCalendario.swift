@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import Firebase
+
 import FirebaseDatabase
 
 class CatxCalendario: UIViewController,UITableViewDelegate,UITableViewDataSource {
@@ -30,7 +30,7 @@ class CatxCalendario: UIViewController,UITableViewDelegate,UITableViewDataSource
         // Do any additional setup after loading the view.
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true);
         
         self.startDownload();
@@ -59,7 +59,7 @@ class CatxCalendario: UIViewController,UITableViewDelegate,UITableViewDataSource
         
         
         
-        if (UIDevice.currentDevice().userInterfaceIdiom == UIUserInterfaceIdiom.Pad)
+        if (UIDevice.current.userInterfaceIdiom == UIUserInterfaceIdiom.pad)
         {
             // Ipad
         }
@@ -77,19 +77,19 @@ class CatxCalendario: UIViewController,UITableViewDelegate,UITableViewDataSource
         
         if let refUnwrapped = self.ref {
             
-            refUnwrapped.observeEventType(.Value, withBlock: { snapshot in
+            refUnwrapped.observe(.value, with: { snapshot in
                 print(snapshot.value)
                 
                 
                 for numJornada:Int in 1...21 {
-                    let itemsRef = snapshot.value?.valueForKey("Jornada" +  String(numJornada));
+                    let itemsRef = (snapshot.value as AnyObject).value(forKey: "Jornada" +  String(numJornada));
                     let calendarioModelFireBase:CalendarioModel = CalendarioModel();
-                    print("Mi jornada 1 es \(snapshot.value?.valueForKey("Jornada" +  String(numJornada)))");
-                    calendarioModelFireBase.resultado = itemsRef!.valueForKey("Resultado") as! String;
-                    calendarioModelFireBase.keyResultado = itemsRef!.valueForKey("KeyResultado") as! String;
-                    calendarioModelFireBase.lugar = itemsRef!.valueForKey("Lugar") as! String;
-                    calendarioModelFireBase.rival = itemsRef!.valueForKey("Rival") as! String;
-                    calendarioModelFireBase.hora = itemsRef!.valueForKey("Hora") as! String;
+                    print("Mi jornada 1 es \((snapshot.value as AnyObject).value(forKey: "Jornada" +  String(numJornada)))");
+                    calendarioModelFireBase.resultado = (itemsRef! as AnyObject).value(forKey: "Resultado") as! String;
+                    calendarioModelFireBase.keyResultado = (itemsRef! as AnyObject).value(forKey: "KeyResultado") as! String;
+                    calendarioModelFireBase.lugar = (itemsRef! as AnyObject).value(forKey: "Lugar") as! String;
+                    calendarioModelFireBase.rival = (itemsRef! as AnyObject).value(forKey: "Rival") as! String;
+                    calendarioModelFireBase.hora = (itemsRef! as AnyObject).value(forKey: "Hora") as! String;
                     self.listCalendarioDataFirebase.append(calendarioModelFireBase);
                     
                 }
@@ -99,9 +99,8 @@ class CatxCalendario: UIViewController,UITableViewDelegate,UITableViewDataSource
                 self.setup();
                 self.loadData();
                 
-                }, withCancelBlock: { error in
-                    print(error.description)
-                    print("nooooo");
+                }, withCancel: { error in
+                    
                     self.setup();
                     self.loadData();
             })
@@ -118,15 +117,15 @@ class CatxCalendario: UIViewController,UITableViewDelegate,UITableViewDataSource
     func setup () -> Void {
         
         self.tabBarController?.navigationItem.title = "Catenaxio"
-        let buttonSinc:UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Refresh, target: self, action: #selector(CatxCalendario.pushSynData));
+        let buttonSinc:UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.refresh, target: self, action: #selector(CatxCalendario.pushSynData));
         self.tabBarController?.navigationItem.rightBarButtonItems = [buttonSinc];
         //self.tabBarController?.tabBar.translucent = false;
         //self.tabBarController?.tabBar.tintColor = UIColor(red: 48/255, green: 67/255, blue: 74/255, alpha: 1);
         //self.tabBarController?.tabBar.barTintColor = UIColor.whiteColor(); //fondo barra abajo
         self.tabBarController?.navigationController?.navigationBar.barTintColor = UIColor(red: 68/255, green: 146/255, blue: 132/255, alpha: 1);
-        self.tabBarController?.navigationController?.navigationBar.tintColor = UIColor.whiteColor();
-        self.tabBarController?.navigationController?.navigationBar.translucent = true;
-        let titleDict: NSDictionary = [NSForegroundColorAttributeName: UIColor.whiteColor()];
+        self.tabBarController?.navigationController?.navigationBar.tintColor = UIColor.white;
+        self.tabBarController?.navigationController?.navigationBar.isTranslucent = true;
+        let titleDict: NSDictionary = [NSForegroundColorAttributeName: UIColor.white];
         self.tabBarController?.navigationController?.navigationBar.titleTextAttributes = titleDict as? [String : AnyObject];
         
         //gradient
@@ -134,15 +133,15 @@ class CatxCalendario: UIViewController,UITableViewDelegate,UITableViewDataSource
         let gradient : CAGradientLayer = CAGradientLayer()
         gradient.frame = vista.bounds
         
-        let cor1 = UIColor(red: 17/255, green: 124/255, blue: 104/255, alpha: 1).CGColor;
-        let cor2 = UIColor(red: 48/255, green: 67/255, blue: 74/255, alpha: 1).CGColor;
+        let cor1 = UIColor(red: 17/255, green: 124/255, blue: 104/255, alpha: 1).cgColor;
+        let cor2 = UIColor(red: 48/255, green: 67/255, blue: 74/255, alpha: 1).cgColor;
         let arrayColors = [cor1, cor2]
         
         gradient.colors = arrayColors
-        self.view.layer.insertSublayer(gradient, atIndex: 0)
+        self.view.layer.insertSublayer(gradient, at: 0)
         
         
-        self.tableView.registerNib(UINib(nibName: "CatxCeldaCalendario", bundle: nil), forCellReuseIdentifier: CatxCeldaCalendario.cellId);
+        self.tableView.register(UINib(nibName: "CatxCeldaCalendario", bundle: nil), forCellReuseIdentifier: CatxCeldaCalendario.cellId);
         self.tableView.contentInset = UIEdgeInsets(top: 10, left: 0, bottom: 0, right: 0);
         //self.tableView.registerNib(UINib(nibName: "HeaderCeldaPanelAdministrador", bundle: nil), forHeaderFooterViewReuseIdentifier: HeaderCeldaPanelAdministrador.cellId);
         self.tableView.delegate = self;
@@ -189,7 +188,7 @@ class CatxCalendario: UIViewController,UITableViewDelegate,UITableViewDataSource
             
         }
         else{
-            if let path = NSBundle.mainBundle().pathForResource("Calendario", ofType: "plist") {
+            if let path = Bundle.main.path(forResource: "Calendario", ofType: "plist") {
                 self.listCalendario = NSDictionary(contentsOfFile:path) as! [String : AnyObject];
                 
             }
@@ -247,7 +246,7 @@ class CatxCalendario: UIViewController,UITableViewDelegate,UITableViewDataSource
     
     
     //MARK: - Tableview Delegate & Datasource
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if let listValurJornada:[CalendarioModel] = self.listCalendarioData {
             return listValurJornada.count;
         }
@@ -259,7 +258,7 @@ class CatxCalendario: UIViewController,UITableViewDelegate,UITableViewDataSource
     
     
     
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int
+    func numberOfSections(in tableView: UITableView) -> Int
     {
         
         return 1;
@@ -274,9 +273,9 @@ class CatxCalendario: UIViewController,UITableViewDelegate,UITableViewDataSource
     
     
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
-        let cell = tableView.dequeueReusableCellWithIdentifier(CatxCeldaCalendario.cellId, forIndexPath: indexPath) as! CatxCeldaCalendario;
+        let cell = tableView.dequeueReusableCell(withIdentifier: CatxCeldaCalendario.cellId, for: indexPath) as! CatxCeldaCalendario;
         
         let modeloCalendario:CalendarioModel = self.listCalendarioData[indexPath.row];
         cell.horaLabel.text = modeloCalendario.hora;
@@ -289,7 +288,7 @@ class CatxCalendario: UIViewController,UITableViewDelegate,UITableViewDataSource
         let colorResultado:FotosResultados = FotosResultados();
         cell.imagenResultado.backgroundColor = colorResultado.getImageColorWithName(modeloCalendario.keyResultado);
         cell.imagenResultado.roundImage();
-        cell.backgroundColor = UIColor.clearColor();
+        cell.backgroundColor = UIColor.clear;
         cell.estadioLabel.text = modeloCalendario.lugar;
         
         
@@ -299,17 +298,17 @@ class CatxCalendario: UIViewController,UITableViewDelegate,UITableViewDataSource
     
    
     
-    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 0;
     }
     
     
     
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         //self.tableView.reloadSections(NSIndexSet(index: indexPath.section), withRowAnimation: UITableViewRowAnimation.Fade)
         
-        self.tableView.deselectRowAtIndexPath(indexPath, animated: false);
+        self.tableView.deselectRow(at: indexPath, animated: false);
         
         
         
@@ -319,7 +318,7 @@ class CatxCalendario: UIViewController,UITableViewDelegate,UITableViewDataSource
     
     
   
-    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 160;
     }
 

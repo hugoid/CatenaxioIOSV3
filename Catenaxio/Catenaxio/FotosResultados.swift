@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 class FotosResultados: NSObject {
     
-    func getImageWithName(nombre:String) -> UIImage {
+    func getImageWithName(_ nombre:String) -> UIImage {
         
         if nombre == "G" {
             return UIImage(named: "victoria")!;
@@ -31,23 +31,23 @@ class FotosResultados: NSObject {
         
     }
     
-    func getImageColorWithName(nombre:String) -> UIColor {
+    func getImageColorWithName(_ nombre:String) -> UIColor {
         
         if nombre == "G" {
-            return UIColor.greenColor();
+            return UIColor.green;
         }
         else if nombre == "P" {
-            return UIColor.redColor();
+            return UIColor.red;
             
         }
         else if nombre == "E" {
-            return UIColor.yellowColor();
+            return UIColor.yellow;
             
         }
             
             
         else{
-            return UIColor.whiteColor();
+            return UIColor.white;
         }
         
     }

@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import Firebase
+
 import FirebaseDatabase
 
 class CatxEstadisticas: UIViewController,UITableViewDelegate,UITableViewDataSource,UIActionSheetDelegate {
@@ -29,7 +29,7 @@ class CatxEstadisticas: UIViewController,UITableViewDelegate,UITableViewDataSour
         // Do any additional setup after loading the view.
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true);
 
         //barra de navegacion
@@ -69,22 +69,22 @@ class CatxEstadisticas: UIViewController,UITableViewDelegate,UITableViewDataSour
             
             if let refUnwrapped = refEstadisticas {
                 
-                refUnwrapped.observeEventType(.Value, withBlock: { snapshot in
+                refUnwrapped.observe(.value, with: { snapshot in
                     print(snapshot.value)
                     
-                    let valorPartidosTotales:AnyObject = (snapshot.value?.valueForKey("PJ"))!;
-                    self.partidosJugados = String(valorPartidosTotales);
-                    let listaJugadores:[AnyObject] = snapshot.value?.valueForKey("Jugadores") as! [AnyObject];
+                    let valorPartidosTotales:Any = ((snapshot.value as AnyObject).value(forKey: "PJ"))!;
+                    self.partidosJugados = String(describing: valorPartidosTotales);
+                    let listaJugadores:[AnyObject] = (snapshot.value as AnyObject).value(forKey: "Jugadores") as! [AnyObject];
                     
                     for jugador:AnyObject in listaJugadores {
                         print("mis jugador \(jugador)");
                         
                         let miJugador:EstadisticasModel = EstadisticasModel();
-                        miJugador.nombre = jugador.valueForKey("Nombre") as! String;
-                        miJugador.asistencias = String(jugador.valueForKey("Asistencias")!);
-                        miJugador.goles = String(jugador.valueForKey("Goles")!);
-                        miJugador.partidosGanados = String(jugador.valueForKey("PG")!);
-                        miJugador.partidosJugados = String(jugador.valueForKey("PJ")!);
+                        miJugador.nombre = jugador.value(forKey: "Nombre") as! String;
+                        miJugador.asistencias = String(describing: jugador.value(forKey: "Asistencias")!);
+                        miJugador.goles = String(describing: jugador.value(forKey: "Goles")!);
+                        miJugador.partidosGanados = String(describing: jugador.value(forKey: "PG")!);
+                        miJugador.partidosJugados = String(describing: jugador.value(forKey: "PJ")!);
                         let imagenJugador : CatxImagenJugador = CatxImagenJugador();
                         miJugador.urlImagenJugador = imagenJugador.getURLImageForName(miJugador.nombre);
                         self.listCalendarioDataFirebase.append(miJugador);
@@ -98,9 +98,7 @@ class CatxEstadisticas: UIViewController,UITableViewDelegate,UITableViewDataSour
                     self.setup();
                     self.loadData();
                     
-                    }, withCancelBlock: { error in
-                        print(error.description)
-                        print("nooooo");
+                    }, withCancel: { error in
                         self.setup();
                         self.loadData();
                 })
@@ -125,16 +123,16 @@ class CatxEstadisticas: UIViewController,UITableViewDelegate,UITableViewDataSour
     // MARK: - Setup Color UI
     func setupUI () -> Void {
         self.tabBarController?.navigationItem.title = "Catenaxio"
-        let buttonSinc:UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Refresh, target: self, action: #selector(CatxEstadisticas.pushSynData));
-        let buttonShowGraph:UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Search, target: self, action: #selector(CatxEstadisticas.pushShowGraph));
+        let buttonSinc:UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.refresh, target: self, action: #selector(CatxEstadisticas.pushSynData));
+        let buttonShowGraph:UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.search, target: self, action: #selector(CatxEstadisticas.pushShowGraph));
         self.tabBarController?.navigationItem.rightBarButtonItems = [buttonShowGraph,buttonSinc];
         //self.tabBarController?.tabBar.translucent = false;
         //self.tabBarController?.tabBar.tintColor = UIColor(red: 48/255, green: 67/255, blue: 74/255, alpha: 1);
         //self.tabBarController?.tabBar.barTintColor = UIColor.whiteColor(); //fondo barra abajo
         self.tabBarController?.navigationController?.navigationBar.barTintColor = UIColor(red: 68/255, green: 146/255, blue: 132/255, alpha: 1);
-        self.tabBarController?.navigationController?.navigationBar.tintColor = UIColor.whiteColor();
-        self.tabBarController?.navigationController?.navigationBar.translucent = true;
-        let titleDict: NSDictionary = [NSForegroundColorAttributeName: UIColor.whiteColor()];
+        self.tabBarController?.navigationController?.navigationBar.tintColor = UIColor.white;
+        self.tabBarController?.navigationController?.navigationBar.isTranslucent = true;
+        let titleDict: NSDictionary = [NSForegroundColorAttributeName: UIColor.white];
         self.tabBarController?.navigationController?.navigationBar.titleTextAttributes = titleDict as? [String : AnyObject];
     
         //gradient
@@ -142,18 +140,18 @@ class CatxEstadisticas: UIViewController,UITableViewDelegate,UITableViewDataSour
         let gradient : CAGradientLayer = CAGradientLayer()
         gradient.frame = vista.bounds
         
-        let cor1 = UIColor(red: 17/255, green: 124/255, blue: 104/255, alpha: 1).CGColor;
-        let cor2 = UIColor(red: 48/255, green: 67/255, blue: 74/255, alpha: 1).CGColor;
+        let cor1 = UIColor(red: 17/255, green: 124/255, blue: 104/255, alpha: 1).cgColor;
+        let cor2 = UIColor(red: 48/255, green: 67/255, blue: 74/255, alpha: 1).cgColor;
         let arrayColors = [cor1, cor2]
         
         gradient.colors = arrayColors
-        self.view.layer.insertSublayer(gradient, atIndex: 0)
+        self.view.layer.insertSublayer(gradient, at: 0)
     }
     
     // MARK: - Setup Table
     func setup () -> Void {
-        self.tableView.registerNib(UINib(nibName: "CatxCeldaEstadisticas", bundle: nil), forCellReuseIdentifier: CatxCeldaEstadisticas.cellId);
-        self.tableView.registerNib(UINib(nibName: "CatxHeaderEstadisticas", bundle: nil), forCellReuseIdentifier: CatxHeaderEstadisticas.cellId);
+        self.tableView.register(UINib(nibName: "CatxCeldaEstadisticas", bundle: nil), forCellReuseIdentifier: CatxCeldaEstadisticas.cellId);
+        self.tableView.register(UINib(nibName: "CatxHeaderEstadisticas", bundle: nil), forCellReuseIdentifier: CatxHeaderEstadisticas.cellId);
         self.tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0);
         
         //self.tableView.registerNib(UINib(nibName: "HeaderCeldaPanelAdministrador", bundle: nil), forHeaderFooterViewReuseIdentifier: HeaderCeldaPanelAdministrador.cellId);
@@ -175,12 +173,12 @@ class CatxEstadisticas: UIViewController,UITableViewDelegate,UITableViewDataSour
         
         let actionSheet = UIActionSheet(title: "Opciones", delegate: self, cancelButtonTitle: "Cancelar", destructiveButtonTitle: nil, otherButtonTitles: "Goles", "Asistencias")
         
-        actionSheet.showInView(self.view)
+        actionSheet.show(in: self.view)
         
     }
     
     //MARK: Delegate Action Sheet
-    func actionSheet(actionSheet: UIActionSheet, clickedButtonAtIndex buttonIndex: Int)
+    func actionSheet(_ actionSheet: UIActionSheet, clickedButtonAt buttonIndex: Int)
     {
         print("\(buttonIndex)")
         switch (buttonIndex){
@@ -313,7 +311,7 @@ class CatxEstadisticas: UIViewController,UITableViewDelegate,UITableViewDataSour
     
     
     //MARK: - Tableview Delegate & Datasource
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if let listValurJornada:[EstadisticasModel] = self.listCalendarioData {
             return listValurJornada.count;
         }
@@ -325,7 +323,7 @@ class CatxEstadisticas: UIViewController,UITableViewDelegate,UITableViewDataSour
     
     
     
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int
+    func numberOfSections(in tableView: UITableView) -> Int
     {
         
         return 1;
@@ -340,9 +338,9 @@ class CatxEstadisticas: UIViewController,UITableViewDelegate,UITableViewDataSour
     
     
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
-        let cell = tableView.dequeueReusableCellWithIdentifier(CatxCeldaEstadisticas.cellId, forIndexPath: indexPath) as! CatxCeldaEstadisticas;
+        let cell = tableView.dequeueReusableCell(withIdentifier: CatxCeldaEstadisticas.cellId, for: indexPath) as! CatxCeldaEstadisticas;
         
         let modeloCalendario:EstadisticasModel = self.listCalendarioData[indexPath.row];
         
@@ -358,16 +356,16 @@ class CatxEstadisticas: UIViewController,UITableViewDelegate,UITableViewDataSour
         
        
         
-        cell.backgroundColor = UIColor.clearColor();
+        cell.backgroundColor = UIColor.clear;
         
         return cell
         
     }
     
-    func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
      
      //let header = (tableView.dequeueReusableHeaderFooterViewWithIdentifier(HeaderCeldaPanelAdministrador.cellId)) as! HeaderCeldaPanelAdministrador;
-     let header = (tableView.dequeueReusableCellWithIdentifier(CatxHeaderEstadisticas.cellId)) as! CatxHeaderEstadisticas;
+     let header = (tableView.dequeueReusableCell(withIdentifier: CatxHeaderEstadisticas.cellId)) as! CatxHeaderEstadisticas;
      
         header.contentView.backgroundColor = UIColor(red: 68/255, green: 146/255, blue: 132/255, alpha: 1);
         header.labelPartidosTotales.text = self.partidosJugados;
@@ -378,13 +376,13 @@ class CatxEstadisticas: UIViewController,UITableViewDelegate,UITableViewDataSour
      }
    
     
-    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 40;
     }
     
     
     
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         //self.tableView.reloadSections(NSIndexSet(index: indexPath.section), withRowAnimation: UITableViewRowAnimation.Fade)
         
@@ -395,7 +393,7 @@ class CatxEstadisticas: UIViewController,UITableViewDelegate,UITableViewDataSour
         
         
     }
-    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 85;
     }
     /*func tableView(tableView: UITableView, estimatedHeightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {

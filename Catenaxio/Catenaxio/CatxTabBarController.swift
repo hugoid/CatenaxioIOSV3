@@ -17,7 +17,7 @@ class CatxTabBarController: UITabBarController {
         UITabBar.appearance().tintColor = UIColor(red: 48/255, green: 67/255, blue: 74/255, alpha: 1)
         
         // Sets the default color of the background of the UITabBar
-        UITabBar.appearance().barTintColor = UIColor.whiteColor()
+        UITabBar.appearance().barTintColor = UIColor.white
     }
 
     override func didReceiveMemoryWarning() {

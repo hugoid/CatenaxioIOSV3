@@ -11,7 +11,7 @@ import UIKit
 
 class FotosNombre: NSObject {
     
-    func getImageWithName(nombre:String) -> UIImage {
+    func getImageWithName(_ nombre:String) -> UIImage {
         
         if nombre == "Abel" {
             return UIImage(named: "abel")!;

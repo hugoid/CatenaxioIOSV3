@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import Firebase
+
 import FirebaseStorage
 
 class CatxClasificacion: UIViewController {
@@ -20,7 +20,7 @@ class CatxClasificacion: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true);
         
         
@@ -45,9 +45,9 @@ class CatxClasificacion: UIViewController {
     func startDownload () -> Void {
         
         self.indicatorWaiting.startAnimating()
-        self.indicatorWaiting.hidden = false
+        self.indicatorWaiting.isHidden = false
         // Points to the root reference
-        let storageRef = FIRStorage.storage().referenceForURL("gs://catenaxio-dd230.appspot.com");
+        let storageRef = FIRStorage.storage().reference(forURL: "gs://catenaxio-dd230.appspot.com");
         // Create a reference from a Google Cloud Storage URI
         
         // Points to "images"
@@ -60,17 +60,17 @@ class CatxClasificacion: UIViewController {
         
         // Start the download (in this case writing to a file)
         // Create local filesystem URL
-        let localURL: NSURL! = NSURL(string: "file:///local/images/island.jpg")
-        let downloadTask = imagesRef.writeToFile(localURL)
+        let localURL: URL! = URL(string: "file:///local/images/island.jpg")
+        let downloadTask = imagesRef.write(toFile: localURL)
         
         // Download in memory with a maximum allowed size of 1MB (1 * 1024 * 1024 bytes)
-        imagesRef.dataWithMaxSize(5 * 1024 * 1024) { (data, error) -> Void in
+        imagesRef.data(withMaxSize: 5 * 1024 * 1024) { (data, error) -> Void in
             if (error != nil) {
                 // Uh-oh, an error occurred!
                 print("error");
                 
                 self.indicatorWaiting.stopAnimating()
-                self.indicatorWaiting.hidden = true;
+                self.indicatorWaiting.isHidden = true;
             } else {
                 // Data for "images/island.jpg" is returned
                 // ... let islandImage: UIImage! = UIImage(data: data!)
@@ -79,46 +79,46 @@ class CatxClasificacion: UIViewController {
                 self.imageClasificacion.image = imagenClasificacion;
                 
                 self.indicatorWaiting.stopAnimating()
-                self.indicatorWaiting.hidden = true;
+                self.indicatorWaiting.isHidden = true;
             }
         }
         
         // Observe changes in status
-        downloadTask.observeStatus(.Resume) { (snapshot) -> Void in
+        downloadTask.observe(.resume) { (snapshot) -> Void in
             // Download resumed, also fires when the download starts
             print("descargado correctamente imagen");
             
         }
         
-        downloadTask.observeStatus(.Success) { (snapshot) -> Void in
+        downloadTask.observe(.success) { (snapshot) -> Void in
             // Download completed successfully
             print("descargado suscessfuly imagen \(snapshot)");
             
         }
         
         // Errors only occur in the "Failure" case
-        downloadTask.observeStatus(.Failure) { (snapshot) -> Void in
+        downloadTask.observe(.failure) { (snapshot) -> Void in
             guard let storageError = snapshot.error else { return }
-            guard let errorCode = FIRStorageErrorCode(rawValue: storageError.code) else { return }
+            guard let errorCode = FIRStorageErrorCode(rawValue: storageError._code) else { return }
             switch errorCode {
-            case .ObjectNotFound:
+            case .objectNotFound:
                 // File doesn't exist
                 print("nof found");
                 
                 
-            case .Unauthorized:
+            case .unauthorized:
                 // User doesn't have permission to access file
                 print("not unatorized");
              
                 
-            case .Cancelled:
+            case .cancelled:
                 // User canceled the upload
                 print("cancelled");
                 
                 
                 //...
                 
-            case .Unknown:
+            case .unknown:
                 // Unknown error occurred, inspect the server response
                 print("unknow");
                
@@ -135,15 +135,15 @@ class CatxClasificacion: UIViewController {
     // MARK: - Setup Color UI
     func setupUI () -> Void {
         self.tabBarController?.navigationItem.title = "Catenaxio"
-        let buttonSinc:UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Refresh, target: self, action: #selector(CatxClasificacion.pushSynData));
+        let buttonSinc:UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.refresh, target: self, action: #selector(CatxClasificacion.pushSynData));
         self.tabBarController?.navigationItem.rightBarButtonItems = [buttonSinc];
         //self.tabBarController?.tabBar.translucent = false;
         //self.tabBarController?.tabBar.tintColor = UIColor(red: 48/255, green: 67/255, blue: 74/255, alpha: 1);
         //self.tabBarController?.tabBar.barTintColor = UIColor.whiteColor(); //fondo barra abajo
         self.tabBarController?.navigationController?.navigationBar.barTintColor = UIColor(red: 68/255, green: 146/255, blue: 132/255, alpha: 1);
-        self.tabBarController?.navigationController?.navigationBar.tintColor = UIColor.whiteColor();
-        self.tabBarController?.navigationController?.navigationBar.translucent = true;
-        let titleDict: NSDictionary = [NSForegroundColorAttributeName: UIColor.whiteColor()];
+        self.tabBarController?.navigationController?.navigationBar.tintColor = UIColor.white;
+        self.tabBarController?.navigationController?.navigationBar.isTranslucent = true;
+        let titleDict: NSDictionary = [NSForegroundColorAttributeName: UIColor.white];
         self.tabBarController?.navigationController?.navigationBar.titleTextAttributes = titleDict as? [String : AnyObject];
         
         //gradient
@@ -151,12 +151,12 @@ class CatxClasificacion: UIViewController {
         let gradient : CAGradientLayer = CAGradientLayer()
         gradient.frame = vista.bounds
         
-        let cor1 = UIColor(red: 17/255, green: 124/255, blue: 104/255, alpha: 1).CGColor;
-        let cor2 = UIColor(red: 48/255, green: 67/255, blue: 74/255, alpha: 1).CGColor;
+        let cor1 = UIColor(red: 17/255, green: 124/255, blue: 104/255, alpha: 1).cgColor;
+        let cor2 = UIColor(red: 48/255, green: 67/255, blue: 74/255, alpha: 1).cgColor;
         let arrayColors = [cor1, cor2]
         
         gradient.colors = arrayColors
-        self.view.layer.insertSublayer(gradient, atIndex: 0)
+        self.view.layer.insertSublayer(gradient, at: 0)
     }
     
     func pushSynData () -> Void {

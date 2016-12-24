@@ -17,9 +17,9 @@ struct Constants {
 	// MARK: - Device
     enum UIUserInterfaceIdiom : Int
     {
-        case Unspecified
-        case Phone
-        case Pad
+        case unspecified
+        case phone
+        case pad
     }
 	/**
 	nombre jugadores

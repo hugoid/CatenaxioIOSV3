@@ -11,7 +11,7 @@ import UIKit
 
 class FotosEstadio: NSObject {
     
-    func getImageWithName(nombre:String) -> UIImage {
+    func getImageWithName(_ nombre:String) -> UIImage {
         print("mi estadio es \(nombre)")
         if nombre == "Juan de la Cierva" {
             return UIImage(named: "cierva")!;

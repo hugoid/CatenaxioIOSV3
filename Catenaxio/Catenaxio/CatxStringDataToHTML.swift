@@ -12,7 +12,7 @@ class CatxStringDataToHTML: NSObject {
     
     
     
-    func getStringToHTML(listaJugadores:[EstadisticasModel],tipoPuntuacion:String) -> NSString {
+    func getStringToHTML(_ listaJugadores:[EstadisticasModel],tipoPuntuacion:String) -> NSString {
         
         var puntosAbelG:Int = 0;
         var puntosAbelD:Int = 0;

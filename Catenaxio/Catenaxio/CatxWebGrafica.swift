@@ -38,21 +38,21 @@ class CatxWebGrafica: UIViewController, UIWebViewDelegate {
         print("muestro grafica con datos \(self.listaEstadisticas)");
         
         
-        let thisBundle = NSBundle.mainBundle();
-        let path = thisBundle.pathForResource("ejemplo3", ofType: "html");
-        let instructionsURL = NSURL.fileURLWithPath(path!);
-        self.web.loadRequest(NSURLRequest(URL: instructionsURL));
+        let thisBundle = Bundle.main;
+        let path = thisBundle.path(forResource: "ejemplo3", ofType: "html");
+        let instructionsURL = URL(fileURLWithPath: path!);
+        self.web.loadRequest(URLRequest(url: instructionsURL));
         
         self.web.delegate = self;
         self.web.scalesPageToFit = true;
         
     }
     
-    func webViewDidFinishLoad(webView: UIWebView) {
+    func webViewDidFinishLoad(_ webView: UIWebView) {
         
         
         let catxString:CatxStringDataToHTML = CatxStringDataToHTML();
-        self.web.stringByEvaluatingJavaScriptFromString(catxString.getStringToHTML(self.listaEstadisticas, tipoPuntuacion: self.tipoDato) as String);
+        self.web.stringByEvaluatingJavaScript(from: catxString.getStringToHTML(self.listaEstadisticas, tipoPuntuacion: self.tipoDato) as String);
        
     }
 

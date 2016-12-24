@@ -20,7 +20,6 @@
 		1E58176F1D351F55004C0FC0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E58176D1D351F55004C0FC0 /* LaunchScreen.storyboard */; };
 		1E58177A1D351F55004C0FC0 /* CatenaxioTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5817791D351F55004C0FC0 /* CatenaxioTests.swift */; };
 		1E5817851D351F55004C0FC0 /* CatenaxioUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5817841D351F55004C0FC0 /* CatenaxioUITests.swift */; };
-		1E5C31471D489E4E00FAB93F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1E5C31461D489E4E00FAB93F /* GoogleService-Info.plist */; };
 		1E66B82B1D5DBF2B000E8AD5 /* CatxStringDataToHTML.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E66B82A1D5DBF2B000E8AD5 /* CatxStringDataToHTML.swift */; };
 		1E82D3141D58914400B927D9 /* FotosEstadio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E82D3131D58914400B927D9 /* FotosEstadio.swift */; };
 		1E82D3171D589A5C00B927D9 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E82D3161D589A5C00B927D9 /* Constants.swift */; };
@@ -38,11 +37,46 @@
 		1EDF17181D3E2BCD00A34935 /* CalendarioModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EDF17171D3E2BCD00A34935 /* CalendarioModel.swift */; };
 		2111BAA61D57A0B4000D46FE /* FotosNombre.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2111BAA51D57A0B4000D46FE /* FotosNombre.swift */; };
 		2111BAA81D57A706000D46FE /* UIImageView+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2111BAA71D57A706000D46FE /* UIImageView+Utils.swift */; };
+		2192A2101E0EC4E10055B326 /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2192A1E01E0EC4E10055B326 /* GoogleMobileAds.framework */; };
+		2192A2111E0EC4E10055B326 /* FirebaseAnalytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2192A1E21E0EC4E10055B326 /* FirebaseAnalytics.framework */; };
+		2192A2121E0EC4E10055B326 /* FirebaseCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2192A1E31E0EC4E10055B326 /* FirebaseCore.framework */; };
+		2192A2131E0EC4E10055B326 /* FirebaseInstanceID.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2192A1E41E0EC4E10055B326 /* FirebaseInstanceID.framework */; };
+		2192A2141E0EC4E10055B326 /* GoogleInterchangeUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2192A1E51E0EC4E10055B326 /* GoogleInterchangeUtilities.framework */; };
+		2192A2151E0EC4E10055B326 /* GoogleSymbolUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2192A1E61E0EC4E10055B326 /* GoogleSymbolUtilities.framework */; };
+		2192A2161E0EC4E10055B326 /* GoogleToolboxForMac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2192A1E71E0EC4E10055B326 /* GoogleToolboxForMac.framework */; };
+		2192A2171E0EC4E10055B326 /* FirebaseAppIndexing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2192A1E91E0EC4E10055B326 /* FirebaseAppIndexing.framework */; };
+		2192A2181E0EC4E10055B326 /* FirebaseAuth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2192A1EB1E0EC4E10055B326 /* FirebaseAuth.framework */; };
+		2192A2191E0EC4E10055B326 /* GTMSessionFetcher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2192A1EC1E0EC4E10055B326 /* GTMSessionFetcher.framework */; };
+		2192A21A1E0EC4E10055B326 /* batch-upload in Resources */ = {isa = PBXBuildFile; fileRef = 2192A1EE1E0EC4E10055B326 /* batch-upload */; };
+		2192A21B1E0EC4E10055B326 /* dump_syms in Resources */ = {isa = PBXBuildFile; fileRef = 2192A1EF1E0EC4E10055B326 /* dump_syms */; };
+		2192A21C1E0EC4E10055B326 /* extract-keys in Resources */ = {isa = PBXBuildFile; fileRef = 2192A1F01E0EC4E10055B326 /* extract-keys */; };
+		2192A21D1E0EC4E10055B326 /* FirebaseCrash.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2192A1F11E0EC4E10055B326 /* FirebaseCrash.framework */; };
+		2192A21E1E0EC4E10055B326 /* upload-sym in Resources */ = {isa = PBXBuildFile; fileRef = 2192A1F21E0EC4E10055B326 /* upload-sym */; };
+		2192A21F1E0EC4E10055B326 /* upload-sym-util.bash in Resources */ = {isa = PBXBuildFile; fileRef = 2192A1F31E0EC4E10055B326 /* upload-sym-util.bash */; };
+		2192A2201E0EC4E10055B326 /* upload-sym.sh in Resources */ = {isa = PBXBuildFile; fileRef = 2192A1F41E0EC4E10055B326 /* upload-sym.sh */; };
+		2192A2211E0EC4E10055B326 /* FirebaseDatabase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2192A1F61E0EC4E10055B326 /* FirebaseDatabase.framework */; };
+		2192A2221E0EC4E10055B326 /* FirebaseDynamicLinks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2192A1F81E0EC4E10055B326 /* FirebaseDynamicLinks.framework */; };
+		2192A2231E0EC4E10055B326 /* FirebaseDynamicLinks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2192A1FB1E0EC4E10055B326 /* FirebaseDynamicLinks.framework */; };
+		2192A2241E0EC4E10055B326 /* FirebaseInvites.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2192A1FC1E0EC4E10055B326 /* FirebaseInvites.framework */; };
+		2192A2251E0EC4E10055B326 /* GoogleAPIClientForREST.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2192A1FD1E0EC4E10055B326 /* GoogleAPIClientForREST.framework */; };
+		2192A2261E0EC4E10055B326 /* GoogleAppUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2192A1FE1E0EC4E10055B326 /* GoogleAppUtilities.framework */; };
+		2192A2271E0EC4E10055B326 /* GoogleSignIn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2192A1FF1E0EC4E10055B326 /* GoogleSignIn.framework */; };
+		2192A2281E0EC4E10055B326 /* GTMOAuth2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2192A2001E0EC4E10055B326 /* GTMOAuth2.framework */; };
+		2192A2291E0EC4E10055B326 /* GTMSessionFetcher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2192A2011E0EC4E10055B326 /* GTMSessionFetcher.framework */; };
+		2192A22A1E0EC4E10055B326 /* GINInviteResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2192A2031E0EC4E10055B326 /* GINInviteResources.bundle */; };
+		2192A22B1E0EC4E10055B326 /* GoogleSignIn.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2192A2041E0EC4E10055B326 /* GoogleSignIn.bundle */; };
+		2192A22C1E0EC4E10055B326 /* GPPACLPickerResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2192A2051E0EC4E10055B326 /* GPPACLPickerResources.bundle */; };
+		2192A22D1E0EC4E10055B326 /* FirebaseMessaging.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2192A2071E0EC4E10055B326 /* FirebaseMessaging.framework */; };
+		2192A22E1E0EC4E10055B326 /* NOTICES in Resources */ = {isa = PBXBuildFile; fileRef = 2192A2091E0EC4E10055B326 /* NOTICES */; };
+		2192A22F1E0EC4E10055B326 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 2192A20A1E0EC4E10055B326 /* README.md */; };
+		2192A2301E0EC4E10055B326 /* FirebaseRemoteConfig.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2192A20C1E0EC4E10055B326 /* FirebaseRemoteConfig.framework */; };
+		2192A2311E0EC4E10055B326 /* FirebaseStorage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2192A20E1E0EC4E10055B326 /* FirebaseStorage.framework */; };
+		2192A2321E0EC4E10055B326 /* GTMSessionFetcher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2192A20F1E0EC4E10055B326 /* GTMSessionFetcher.framework */; };
+		2192A2351E0ECA7D0055B326 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2192A2341E0ECA7D0055B326 /* GoogleService-Info.plist */; };
 		21C340461D4E09C3007B85D7 /* CatxWebGrafica.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C340441D4E09C3007B85D7 /* CatxWebGrafica.swift */; };
 		21C340471D4E09C3007B85D7 /* CatxWebGrafica.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21C340451D4E09C3007B85D7 /* CatxWebGrafica.xib */; };
 		21C3404A1D4E0DBC007B85D7 /* ejemplo3.html in Resources */ = {isa = PBXBuildFile; fileRef = 21C340491D4E0DBC007B85D7 /* ejemplo3.html */; };
 		21C3404C1D4E0FDD007B85D7 /* ejemplo2.html in Resources */ = {isa = PBXBuildFile; fileRef = 21C3404B1D4E0FDD007B85D7 /* ejemplo2.html */; };
-		791DEAC417CD926EBCD30BD5 /* libPods-Catenaxio.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B15277BCD5522C4F7EC7F2C8 /* libPods-Catenaxio.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,7 +116,6 @@
 		1E5817801D351F55004C0FC0 /* CatenaxioUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CatenaxioUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E5817841D351F55004C0FC0 /* CatenaxioUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatenaxioUITests.swift; sourceTree = "<group>"; };
 		1E5817861D351F55004C0FC0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1E5C31461D489E4E00FAB93F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1E66B82A1D5DBF2B000E8AD5 /* CatxStringDataToHTML.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatxStringDataToHTML.swift; sourceTree = "<group>"; };
 		1E82D3131D58914400B927D9 /* FotosEstadio.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FotosEstadio.swift; sourceTree = "<group>"; };
 		1E82D3161D589A5C00B927D9 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -100,13 +133,49 @@
 		1EDF17171D3E2BCD00A34935 /* CalendarioModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarioModel.swift; sourceTree = "<group>"; };
 		2111BAA51D57A0B4000D46FE /* FotosNombre.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FotosNombre.swift; sourceTree = "<group>"; };
 		2111BAA71D57A706000D46FE /* UIImageView+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Utils.swift"; sourceTree = "<group>"; };
+		2192A1E01E0EC4E10055B326 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
+		2192A1E21E0EC4E10055B326 /* FirebaseAnalytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FirebaseAnalytics.framework; sourceTree = "<group>"; };
+		2192A1E31E0EC4E10055B326 /* FirebaseCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FirebaseCore.framework; sourceTree = "<group>"; };
+		2192A1E41E0EC4E10055B326 /* FirebaseInstanceID.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FirebaseInstanceID.framework; sourceTree = "<group>"; };
+		2192A1E51E0EC4E10055B326 /* GoogleInterchangeUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleInterchangeUtilities.framework; sourceTree = "<group>"; };
+		2192A1E61E0EC4E10055B326 /* GoogleSymbolUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleSymbolUtilities.framework; sourceTree = "<group>"; };
+		2192A1E71E0EC4E10055B326 /* GoogleToolboxForMac.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleToolboxForMac.framework; sourceTree = "<group>"; };
+		2192A1E91E0EC4E10055B326 /* FirebaseAppIndexing.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FirebaseAppIndexing.framework; sourceTree = "<group>"; };
+		2192A1EB1E0EC4E10055B326 /* FirebaseAuth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FirebaseAuth.framework; sourceTree = "<group>"; };
+		2192A1EC1E0EC4E10055B326 /* GTMSessionFetcher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GTMSessionFetcher.framework; sourceTree = "<group>"; };
+		2192A1EE1E0EC4E10055B326 /* batch-upload */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = "batch-upload"; sourceTree = "<group>"; };
+		2192A1EF1E0EC4E10055B326 /* dump_syms */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = dump_syms; sourceTree = "<group>"; };
+		2192A1F01E0EC4E10055B326 /* extract-keys */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = "extract-keys"; sourceTree = "<group>"; };
+		2192A1F11E0EC4E10055B326 /* FirebaseCrash.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FirebaseCrash.framework; sourceTree = "<group>"; };
+		2192A1F21E0EC4E10055B326 /* upload-sym */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = "upload-sym"; sourceTree = "<group>"; };
+		2192A1F31E0EC4E10055B326 /* upload-sym-util.bash */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "upload-sym-util.bash"; sourceTree = "<group>"; };
+		2192A1F41E0EC4E10055B326 /* upload-sym.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = "upload-sym.sh"; sourceTree = "<group>"; };
+		2192A1F61E0EC4E10055B326 /* FirebaseDatabase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FirebaseDatabase.framework; sourceTree = "<group>"; };
+		2192A1F81E0EC4E10055B326 /* FirebaseDynamicLinks.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FirebaseDynamicLinks.framework; sourceTree = "<group>"; };
+		2192A1F91E0EC4E10055B326 /* Firebase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Firebase.h; sourceTree = "<group>"; };
+		2192A1FB1E0EC4E10055B326 /* FirebaseDynamicLinks.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FirebaseDynamicLinks.framework; sourceTree = "<group>"; };
+		2192A1FC1E0EC4E10055B326 /* FirebaseInvites.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FirebaseInvites.framework; sourceTree = "<group>"; };
+		2192A1FD1E0EC4E10055B326 /* GoogleAPIClientForREST.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleAPIClientForREST.framework; sourceTree = "<group>"; };
+		2192A1FE1E0EC4E10055B326 /* GoogleAppUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleAppUtilities.framework; sourceTree = "<group>"; };
+		2192A1FF1E0EC4E10055B326 /* GoogleSignIn.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleSignIn.framework; sourceTree = "<group>"; };
+		2192A2001E0EC4E10055B326 /* GTMOAuth2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GTMOAuth2.framework; sourceTree = "<group>"; };
+		2192A2011E0EC4E10055B326 /* GTMSessionFetcher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GTMSessionFetcher.framework; sourceTree = "<group>"; };
+		2192A2031E0EC4E10055B326 /* GINInviteResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = GINInviteResources.bundle; sourceTree = "<group>"; };
+		2192A2041E0EC4E10055B326 /* GoogleSignIn.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = GoogleSignIn.bundle; sourceTree = "<group>"; };
+		2192A2051E0EC4E10055B326 /* GPPACLPickerResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = GPPACLPickerResources.bundle; sourceTree = "<group>"; };
+		2192A2071E0EC4E10055B326 /* FirebaseMessaging.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FirebaseMessaging.framework; sourceTree = "<group>"; };
+		2192A2081E0EC4E10055B326 /* module.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
+		2192A2091E0EC4E10055B326 /* NOTICES */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = NOTICES; sourceTree = "<group>"; };
+		2192A20A1E0EC4E10055B326 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		2192A20C1E0EC4E10055B326 /* FirebaseRemoteConfig.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FirebaseRemoteConfig.framework; sourceTree = "<group>"; };
+		2192A20E1E0EC4E10055B326 /* FirebaseStorage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FirebaseStorage.framework; sourceTree = "<group>"; };
+		2192A20F1E0EC4E10055B326 /* GTMSessionFetcher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GTMSessionFetcher.framework; sourceTree = "<group>"; };
+		2192A2331E0EC6BD0055B326 /* Catenaxio-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Catenaxio-Bridging-Header.h"; sourceTree = "<group>"; };
+		2192A2341E0ECA7D0055B326 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		21C340441D4E09C3007B85D7 /* CatxWebGrafica.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatxWebGrafica.swift; sourceTree = "<group>"; };
 		21C340451D4E09C3007B85D7 /* CatxWebGrafica.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CatxWebGrafica.xib; sourceTree = "<group>"; };
 		21C340491D4E0DBC007B85D7 /* ejemplo3.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = ejemplo3.html; sourceTree = "<group>"; };
 		21C3404B1D4E0FDD007B85D7 /* ejemplo2.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = ejemplo2.html; sourceTree = "<group>"; };
-		4FEC6BDBC2CB23CB74F774F1 /* Pods-Catenaxio.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Catenaxio.release.xcconfig"; path = "Pods/Target Support Files/Pods-Catenaxio/Pods-Catenaxio.release.xcconfig"; sourceTree = "<group>"; };
-		7B30904BAA7DD3925B8CD111 /* Pods-Catenaxio.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Catenaxio.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Catenaxio/Pods-Catenaxio.debug.xcconfig"; sourceTree = "<group>"; };
-		B15277BCD5522C4F7EC7F2C8 /* libPods-Catenaxio.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Catenaxio.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,7 +183,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				791DEAC417CD926EBCD30BD5 /* libPods-Catenaxio.a in Frameworks */,
+				2192A2251E0EC4E10055B326 /* GoogleAPIClientForREST.framework in Frameworks */,
+				2192A2301E0EC4E10055B326 /* FirebaseRemoteConfig.framework in Frameworks */,
+				2192A2121E0EC4E10055B326 /* FirebaseCore.framework in Frameworks */,
+				2192A2281E0EC4E10055B326 /* GTMOAuth2.framework in Frameworks */,
+				2192A2321E0EC4E10055B326 /* GTMSessionFetcher.framework in Frameworks */,
+				2192A2231E0EC4E10055B326 /* FirebaseDynamicLinks.framework in Frameworks */,
+				2192A2211E0EC4E10055B326 /* FirebaseDatabase.framework in Frameworks */,
+				2192A2191E0EC4E10055B326 /* GTMSessionFetcher.framework in Frameworks */,
+				2192A2101E0EC4E10055B326 /* GoogleMobileAds.framework in Frameworks */,
+				2192A2261E0EC4E10055B326 /* GoogleAppUtilities.framework in Frameworks */,
+				2192A2131E0EC4E10055B326 /* FirebaseInstanceID.framework in Frameworks */,
+				2192A2151E0EC4E10055B326 /* GoogleSymbolUtilities.framework in Frameworks */,
+				2192A2311E0EC4E10055B326 /* FirebaseStorage.framework in Frameworks */,
+				2192A22D1E0EC4E10055B326 /* FirebaseMessaging.framework in Frameworks */,
+				2192A21D1E0EC4E10055B326 /* FirebaseCrash.framework in Frameworks */,
+				2192A2241E0EC4E10055B326 /* FirebaseInvites.framework in Frameworks */,
+				2192A2141E0EC4E10055B326 /* GoogleInterchangeUtilities.framework in Frameworks */,
+				2192A2171E0EC4E10055B326 /* FirebaseAppIndexing.framework in Frameworks */,
+				2192A2221E0EC4E10055B326 /* FirebaseDynamicLinks.framework in Frameworks */,
+				2192A2161E0EC4E10055B326 /* GoogleToolboxForMac.framework in Frameworks */,
+				2192A2271E0EC4E10055B326 /* GoogleSignIn.framework in Frameworks */,
+				2192A2181E0EC4E10055B326 /* FirebaseAuth.framework in Frameworks */,
+				2192A2291E0EC4E10055B326 /* GTMSessionFetcher.framework in Frameworks */,
+				2192A2111E0EC4E10055B326 /* FirebaseAnalytics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -187,8 +279,7 @@
 				1E5817781D351F55004C0FC0 /* CatenaxioTests */,
 				1E5817831D351F55004C0FC0 /* CatenaxioUITests */,
 				1E5817621D351F55004C0FC0 /* Products */,
-				916A5CC7AB791D79D12E900F /* Pods */,
-				988520D37120B3696C206C00 /* Frameworks */,
+				2192A1DE1E0EC4E10055B326 /* Firebase */,
 			);
 			sourceTree = "<group>";
 		};
@@ -216,7 +307,7 @@
 				1E58176B1D351F55004C0FC0 /* Assets.xcassets */,
 				1E58176D1D351F55004C0FC0 /* LaunchScreen.storyboard */,
 				1E5817701D351F55004C0FC0 /* Info.plist */,
-				1E5C31461D489E4E00FAB93F /* GoogleService-Info.plist */,
+				2192A2341E0ECA7D0055B326 /* GoogleService-Info.plist */,
 			);
 			path = Catenaxio;
 			sourceTree = "<group>";
@@ -255,6 +346,7 @@
 				1E57BBFC1D423D5B00707E6D /* Estadisticas */,
 				1EDF170B1D3E1DDE00A34935 /* Calendario */,
 				1EDF17081D3E1D2C00A34935 /* TabBarController */,
+				2192A2331E0EC6BD0055B326 /* Catenaxio-Bridging-Header.h */,
 			);
 			name = Controladores;
 			sourceTree = "<group>";
@@ -380,6 +472,146 @@
 			name = utils;
 			sourceTree = "<group>";
 		};
+		2192A1DE1E0EC4E10055B326 /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+				2192A1DF1E0EC4E10055B326 /* AdMob */,
+				2192A1E11E0EC4E10055B326 /* Analytics */,
+				2192A1E81E0EC4E10055B326 /* AppIndexing */,
+				2192A1EA1E0EC4E10055B326 /* Auth */,
+				2192A1ED1E0EC4E10055B326 /* Crash */,
+				2192A1F51E0EC4E10055B326 /* Database */,
+				2192A1F71E0EC4E10055B326 /* DynamicLinks */,
+				2192A1F91E0EC4E10055B326 /* Firebase.h */,
+				2192A1FA1E0EC4E10055B326 /* Invites */,
+				2192A2061E0EC4E10055B326 /* Messaging */,
+				2192A2081E0EC4E10055B326 /* module.modulemap */,
+				2192A2091E0EC4E10055B326 /* NOTICES */,
+				2192A20A1E0EC4E10055B326 /* README.md */,
+				2192A20B1E0EC4E10055B326 /* RemoteConfig */,
+				2192A20D1E0EC4E10055B326 /* Storage */,
+			);
+			path = Firebase;
+			sourceTree = "<group>";
+		};
+		2192A1DF1E0EC4E10055B326 /* AdMob */ = {
+			isa = PBXGroup;
+			children = (
+				2192A1E01E0EC4E10055B326 /* GoogleMobileAds.framework */,
+			);
+			path = AdMob;
+			sourceTree = "<group>";
+		};
+		2192A1E11E0EC4E10055B326 /* Analytics */ = {
+			isa = PBXGroup;
+			children = (
+				2192A1E21E0EC4E10055B326 /* FirebaseAnalytics.framework */,
+				2192A1E31E0EC4E10055B326 /* FirebaseCore.framework */,
+				2192A1E41E0EC4E10055B326 /* FirebaseInstanceID.framework */,
+				2192A1E51E0EC4E10055B326 /* GoogleInterchangeUtilities.framework */,
+				2192A1E61E0EC4E10055B326 /* GoogleSymbolUtilities.framework */,
+				2192A1E71E0EC4E10055B326 /* GoogleToolboxForMac.framework */,
+			);
+			path = Analytics;
+			sourceTree = "<group>";
+		};
+		2192A1E81E0EC4E10055B326 /* AppIndexing */ = {
+			isa = PBXGroup;
+			children = (
+				2192A1E91E0EC4E10055B326 /* FirebaseAppIndexing.framework */,
+			);
+			path = AppIndexing;
+			sourceTree = "<group>";
+		};
+		2192A1EA1E0EC4E10055B326 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				2192A1EB1E0EC4E10055B326 /* FirebaseAuth.framework */,
+				2192A1EC1E0EC4E10055B326 /* GTMSessionFetcher.framework */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		2192A1ED1E0EC4E10055B326 /* Crash */ = {
+			isa = PBXGroup;
+			children = (
+				2192A1EE1E0EC4E10055B326 /* batch-upload */,
+				2192A1EF1E0EC4E10055B326 /* dump_syms */,
+				2192A1F01E0EC4E10055B326 /* extract-keys */,
+				2192A1F11E0EC4E10055B326 /* FirebaseCrash.framework */,
+				2192A1F21E0EC4E10055B326 /* upload-sym */,
+				2192A1F31E0EC4E10055B326 /* upload-sym-util.bash */,
+				2192A1F41E0EC4E10055B326 /* upload-sym.sh */,
+			);
+			path = Crash;
+			sourceTree = "<group>";
+		};
+		2192A1F51E0EC4E10055B326 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				2192A1F61E0EC4E10055B326 /* FirebaseDatabase.framework */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
+		2192A1F71E0EC4E10055B326 /* DynamicLinks */ = {
+			isa = PBXGroup;
+			children = (
+				2192A1F81E0EC4E10055B326 /* FirebaseDynamicLinks.framework */,
+			);
+			path = DynamicLinks;
+			sourceTree = "<group>";
+		};
+		2192A1FA1E0EC4E10055B326 /* Invites */ = {
+			isa = PBXGroup;
+			children = (
+				2192A1FB1E0EC4E10055B326 /* FirebaseDynamicLinks.framework */,
+				2192A1FC1E0EC4E10055B326 /* FirebaseInvites.framework */,
+				2192A1FD1E0EC4E10055B326 /* GoogleAPIClientForREST.framework */,
+				2192A1FE1E0EC4E10055B326 /* GoogleAppUtilities.framework */,
+				2192A1FF1E0EC4E10055B326 /* GoogleSignIn.framework */,
+				2192A2001E0EC4E10055B326 /* GTMOAuth2.framework */,
+				2192A2011E0EC4E10055B326 /* GTMSessionFetcher.framework */,
+				2192A2021E0EC4E10055B326 /* Resources */,
+			);
+			path = Invites;
+			sourceTree = "<group>";
+		};
+		2192A2021E0EC4E10055B326 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2192A2031E0EC4E10055B326 /* GINInviteResources.bundle */,
+				2192A2041E0EC4E10055B326 /* GoogleSignIn.bundle */,
+				2192A2051E0EC4E10055B326 /* GPPACLPickerResources.bundle */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		2192A2061E0EC4E10055B326 /* Messaging */ = {
+			isa = PBXGroup;
+			children = (
+				2192A2071E0EC4E10055B326 /* FirebaseMessaging.framework */,
+			);
+			path = Messaging;
+			sourceTree = "<group>";
+		};
+		2192A20B1E0EC4E10055B326 /* RemoteConfig */ = {
+			isa = PBXGroup;
+			children = (
+				2192A20C1E0EC4E10055B326 /* FirebaseRemoteConfig.framework */,
+			);
+			path = RemoteConfig;
+			sourceTree = "<group>";
+		};
+		2192A20D1E0EC4E10055B326 /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				2192A20E1E0EC4E10055B326 /* FirebaseStorage.framework */,
+				2192A20F1E0EC4E10055B326 /* GTMSessionFetcher.framework */,
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
 		21C340431D4E098B007B85D7 /* WebGraphic */ = {
 			isa = PBXGroup;
 			children = (
@@ -400,23 +632,6 @@
 			name = html;
 			sourceTree = "<group>";
 		};
-		916A5CC7AB791D79D12E900F /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				7B30904BAA7DD3925B8CD111 /* Pods-Catenaxio.debug.xcconfig */,
-				4FEC6BDBC2CB23CB74F774F1 /* Pods-Catenaxio.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		988520D37120B3696C206C00 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				B15277BCD5522C4F7EC7F2C8 /* libPods-Catenaxio.a */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -424,12 +639,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1E5817891D351F55004C0FC0 /* Build configuration list for PBXNativeTarget "Catenaxio" */;
 			buildPhases = (
-				2F1C53A8A03CEE26280C2035 /* [CP] Check Pods Manifest.lock */,
 				1E58175D1D351F55004C0FC0 /* Sources */,
 				1E58175E1D351F55004C0FC0 /* Frameworks */,
 				1E58175F1D351F55004C0FC0 /* Resources */,
-				DF3BF32FD6446E2924B6B872 /* [CP] Embed Pods Frameworks */,
-				22F28A19F01549E1275C0673 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -489,13 +701,16 @@
 					1E5817601D351F55004C0FC0 = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = 6VCNHZ8PYX;
+						LastSwiftMigration = 0820;
 					};
 					1E5817741D351F55004C0FC0 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0820;
 						TestTargetID = 1E5817601D351F55004C0FC0;
 					};
 					1E58177F1D351F55004C0FC0 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0820;
 						TestTargetID = 1E5817601D351F55004C0FC0;
 					};
 				};
@@ -526,15 +741,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				1E58176F1D351F55004C0FC0 /* LaunchScreen.storyboard in Resources */,
+				2192A21A1E0EC4E10055B326 /* batch-upload in Resources */,
+				2192A22C1E0EC4E10055B326 /* GPPACLPickerResources.bundle in Resources */,
+				2192A21C1E0EC4E10055B326 /* extract-keys in Resources */,
+				2192A22E1E0EC4E10055B326 /* NOTICES in Resources */,
 				1E58176C1D351F55004C0FC0 /* Assets.xcassets in Resources */,
 				21C3404C1D4E0FDD007B85D7 /* ejemplo2.html in Resources */,
-				1E5C31471D489E4E00FAB93F /* GoogleService-Info.plist in Resources */,
+				2192A21E1E0EC4E10055B326 /* upload-sym in Resources */,
+				2192A21B1E0EC4E10055B326 /* dump_syms in Resources */,
 				1E58176A1D351F55004C0FC0 /* Main.storyboard in Resources */,
 				21C340471D4E09C3007B85D7 /* CatxWebGrafica.xib in Resources */,
 				1EDF17161D3E27DB00A34935 /* Calendario.plist in Resources */,
+				2192A2201E0EC4E10055B326 /* upload-sym.sh in Resources */,
 				1E1A2D951D47586B00CABEFA /* CatxCeldaEstadisticas.xib in Resources */,
+				2192A22A1E0EC4E10055B326 /* GINInviteResources.bundle in Resources */,
 				21C3404A1D4E0DBC007B85D7 /* ejemplo3.html in Resources */,
 				1E118A811D42465F000BDE12 /* Estadisticas.plist in Resources */,
+				2192A22B1E0EC4E10055B326 /* GoogleSignIn.bundle in Resources */,
+				2192A21F1E0EC4E10055B326 /* upload-sym-util.bash in Resources */,
+				2192A2351E0ECA7D0055B326 /* GoogleService-Info.plist in Resources */,
 				1EDF17131D3E234C00A34935 /* CatxCeldaCalendario.xib in Resources */,
 				1E99E19C1D476D8100E1D355 /* CatxHeaderEstadisticas.xib in Resources */,
 			);
@@ -555,54 +780,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		22F28A19F01549E1275C0673 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Catenaxio/Pods-Catenaxio-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		2F1C53A8A03CEE26280C2035 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		DF3BF32FD6446E2924B6B872 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Catenaxio/Pods-Catenaxio-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1E58175D1D351F55004C0FC0 /* Sources */ = {
@@ -629,6 +806,7 @@
 				1E5424C11D3F8DD700C14619 /* Reachability.swift in Sources */,
 				1E118A7F1D424063000BDE12 /* EstadisticasModel.swift in Sources */,
 				1EDF170A1D3E1D6100A34935 /* CatxTabBarController.swift in Sources */,
+				2192A22F1E0EC4E10055B326 /* README.md in Sources */,
 				1E1A2D971D47589500CABEFA /* CatxCeldaEstadisticas.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -705,6 +883,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_BITCODE = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -721,9 +900,14 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"$(OTHER_LDFLAGS)",
+					"$(OTHER_LDFLAGS)",
+					"-ObjC",
+				);
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -751,6 +935,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -761,8 +946,13 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = (
+					"$(OTHER_LDFLAGS)",
+					"$(OTHER_LDFLAGS)",
+					"-ObjC",
+				);
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -771,33 +961,63 @@
 		};
 		1E58178A1D351F55004C0FC0 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7B30904BAA7DD3925B8CD111 /* Pods-Catenaxio.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_BITCODE = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Firebase/AdMob",
+					"$(PROJECT_DIR)/Firebase/Analytics",
+					"$(PROJECT_DIR)/Firebase/AppIndexing",
+					"$(PROJECT_DIR)/Firebase/Auth",
+					"$(PROJECT_DIR)/Firebase/Crash",
+					"$(PROJECT_DIR)/Firebase/Database",
+					"$(PROJECT_DIR)/Firebase/DynamicLinks",
+					"$(PROJECT_DIR)/Firebase/Invites",
+					"$(PROJECT_DIR)/Firebase/Messaging",
+					"$(PROJECT_DIR)/Firebase/RemoteConfig",
+					"$(PROJECT_DIR)/Firebase/Storage",
+				);
 				INFOPLIST_FILE = Catenaxio/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = catenaxio.Catenaxio.Cat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "3784fe64-c0d7-425e-a597-b3fb552a472f";
+				SWIFT_OBJC_BRIDGING_HEADER = "${PROJECT_DIR}/Catenaxio/Catenaxio-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		1E58178B1D351F55004C0FC0 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4FEC6BDBC2CB23CB74F774F1 /* Pods-Catenaxio.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				ENABLE_BITCODE = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Firebase/AdMob",
+					"$(PROJECT_DIR)/Firebase/Analytics",
+					"$(PROJECT_DIR)/Firebase/AppIndexing",
+					"$(PROJECT_DIR)/Firebase/Auth",
+					"$(PROJECT_DIR)/Firebase/Crash",
+					"$(PROJECT_DIR)/Firebase/Database",
+					"$(PROJECT_DIR)/Firebase/DynamicLinks",
+					"$(PROJECT_DIR)/Firebase/Invites",
+					"$(PROJECT_DIR)/Firebase/Messaging",
+					"$(PROJECT_DIR)/Firebase/RemoteConfig",
+					"$(PROJECT_DIR)/Firebase/Storage",
+				);
 				INFOPLIST_FILE = Catenaxio/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = catenaxio.Catenaxio.Cat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "f83e6a06-a27c-4e99-962d-04dd56a5993e";
+				SWIFT_OBJC_BRIDGING_HEADER = "${PROJECT_DIR}/Catenaxio/Catenaxio-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -809,7 +1029,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = catenaxio.CatenaxioTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Catenaxio.app/Catenaxio";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "";
 			};
 			name = Debug;
 		};
@@ -821,7 +1042,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = catenaxio.CatenaxioTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Catenaxio.app/Catenaxio";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "";
 			};
 			name = Release;
 		};
@@ -832,6 +1054,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = catenaxio.CatenaxioUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = Catenaxio;
 			};
 			name = Debug;
@@ -843,6 +1066,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = catenaxio.CatenaxioUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = Catenaxio;
 			};
 			name = Release;

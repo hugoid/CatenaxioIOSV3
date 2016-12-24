@@ -9,7 +9,7 @@
 import Foundation
 
 class CatxImagenJugador: NSObject {
-    func getURLImageForName(name:String) -> String {
+    func getURLImageForName(_ name:String) -> String {
         
         if name == "Hugo" {
             return "hugoUrl";
